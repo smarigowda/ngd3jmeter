@@ -10,8 +10,16 @@
 	<!-- load css -->
 	<link rel="stylesheet" type="text/css" href="./css/myCSS.css">
 
-	<div jm-tsplot ng-controller="MyTSPlotController" folder-name="test_001" file-name="aggregate_report_sample.csv" id="plot_001"></div>
+	<div jm-tsplot 	folder-name="test_001" 
+					file-name="aggregate_report_sample.csv" 
+					id="plot_001">
+	</div>
 
-	<div jm-tsplot ng-controller="MyTSPlotController" folder-name="test_001" file-name="aggregate_report_sample.csv" id="plot_002"></div>
+	<div jm-tsplot 	folder-name="test_001" 
+					file-name="aggregate_report_sample.csv" 
+					id="plot_002"
+					ng-controller="MyMetricController">		
+	</div>
+
 
 </body>
