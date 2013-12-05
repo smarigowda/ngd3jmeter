@@ -54,7 +54,7 @@ var myApp = angular.module('myApp', [])
 	};
 })
 .directive('jmTsplot', function() {
-	return {
+	var directiveDefinitionObject = {
 		restrict: 'A',
 		scope: {},
 		link: function (scope, elem, attrs) {
@@ -70,7 +70,8 @@ var myApp = angular.module('myApp', [])
 				var labels = _.uniq(data.map(function(d) { return d.label; } ));
 				// console.log(labels);
 
-				var select = d3.select('body').append('select');
+				// var select = d3.select('body').append('select');
+				var select = d3.select('#'.concat(attrs.id)).append('select');
 				select.append('option').attr('value', 'ALL').text('ALL');
 				select.selectAll('option')
 						.data(labels).enter().append('option')
@@ -97,7 +98,8 @@ var myApp = angular.module('myApp', [])
 							// console.log('Filtered data...');
 							// console.log(filt_data);
 							// remove the plot
-							d3.selectAll('svg').remove();
+							// d3.selectAll('svg').remove();
+							d3.select('#'.concat([attrs.id])).selectAll('svg').remove();
 							// console.log('data bkp......');
 							// console.log(data_bkp);
 							// re-draw the plot
@@ -110,9 +112,9 @@ var myApp = angular.module('myApp', [])
 
 			scope.drawPlot = function(data) {
 
-					var margin = {top: 20, right: 20, bottom: 400, left: 100},
-						width = 2000 - margin.left - margin.right,
-						height = 800 - margin.top - margin.bottom;
+					var margin = {top: 30, right: 20, bottom: 50, left: 50},
+						width = 1000 - margin.left - margin.right,
+						height = 400 - margin.top - margin.bottom;
 
 					var x = d3.time.scale().range([0, width]);
 					var y = d3.scale.linear().range([height, 0]);
@@ -141,7 +143,7 @@ var myApp = angular.module('myApp', [])
 					// set y domain
 					y.domain(d3.extent(data.map(function(d){return d.elapsed;})));
 					// console.log(y.domain());
-					var svg = d3.select("body").append("svg")
+					var svg = d3.select('#'.concat(attrs.id)).append("svg")
 									.attr("width", width + margin.left + margin.right)
 									.attr("height", height + margin.top + margin.bottom)
 									.append("g")
@@ -178,4 +180,8 @@ var myApp = angular.module('myApp', [])
 		},
 		templateUrl: '/template/jmtsplot_template.html'
 	};
+	// when chrome console is open, it stops at this point
+	// so that we can see all the variables at this point
+	// debugger; 
+	return directiveDefinitionObject;
 });

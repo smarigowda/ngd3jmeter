@@ -3,13 +3,15 @@
 
 <body ng-app="myApp">
 
-  <script src="./vendor/d3.v3.min.js"></script>
-  <script src="./vendor/underscore.js"></script>
-  <script src="./vendor/angular.js"></script>
-  <script src="./js/myApp.js"></script>
-  <!-- load css -->
-  <link rel="stylesheet" type="text/css" href="./css/myCSS.css">
-  
-  <div jm-tsplot ng-controller="MyTSPlotController" folder-name="test_001" file-name="aggregate_report_sample.csv"></div>
-    
+	<script src="./vendor/d3.v3.min.js"></script>
+	<script src="./vendor/underscore.js"></script>
+	<script src="./vendor/angular.js"></script>
+	<script src="./js/myApp.js"></script>
+	<!-- load css -->
+	<link rel="stylesheet" type="text/css" href="./css/myCSS.css">
+
+	<div jm-tsplot ng-controller="MyTSPlotController" folder-name="test_001" file-name="aggregate_report_sample.csv" id="plot_001"></div>
+
+	<div jm-tsplot ng-controller="MyTSPlotController" folder-name="test_001" file-name="aggregate_report_sample.csv" id="plot_002"></div>
+
 </body>
