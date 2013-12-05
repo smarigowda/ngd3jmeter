@@ -10,4 +10,7 @@ How to use?
 4. You can change the data in the data directory and update the html file ngJMeter_tsplot.html to plot time series using your data
 
 5. Hovering the mouse on the transaction point will display the elapsed time and transaction name
+
+6. An option to filter the plot by elapsed or Latency 
+
     
