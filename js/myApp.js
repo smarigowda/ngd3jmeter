@@ -2,7 +2,9 @@ var myApp = angular.module('myApp', [])
 .factory('Data', function() {
 	return { elapsedTime: 0 };
 })
-
+.factory('metriclist', function(){
+	return { names: [ 'elapsed', 'Latency', 'SampleCount' ] };
+})
 // note that $injector can be injected!
 .controller('MyController', ['$scope', 'Data', '$injector', function($scope, Data, $injector){
   $scope.resp_time = Data;
@@ -59,21 +61,26 @@ var myApp = angular.module('myApp', [])
 		templateUrl: 'template.html'
 	};
 })
-.directive('jmTsplot', function() {
+.directive('jmTsplot', ['metriclist', function(metriclist) {
 	var directiveDefinitionObject = {
 		restrict: 'A',
-		scope: {},
+		scope: {
+			fileName: '@',
+			folderName: '@'
+		},
 		transclude: true,
 		controller: 'MyMetricController',
 		link: function (scope, elem, attrs) {
 			window.director_scope = scope;
 			console.log(scope);
+			console.log('@ fileName = '.concat(scope.fileName));
+			console.log('@ director metriclist = '.concat(metriclist));
 
 			// console.log('hello from directive jmTsPlot');
 			// console.log('@ directive folder name = '.concat(attrs.folderName));
 			// console.log('@ directive file name = '.concat(attrs.fileName));
 			
-			d3.csv("./data/".concat(attrs.folderName, "/", attrs.fileName), function(data) {
+			d3.csv("./data/".concat(scope.folderName, "/", scope.fileName), function(data) {
 				// console.log('data @ controller'.concat(data));
 
 				// create a selection html element
@@ -99,9 +106,16 @@ var myApp = angular.module('myApp', [])
 						.attr('value', function(d) { return d; })
 						.text(function(d) { return d; });
 
+				// var metriclist = ['elapsed', 'Latency'];
+				// console.log('metriclist='.concat(metriclist));
 				var select2 = d3.select('#'.concat(attrs.id)).append('select');
-				select2.append('option').attr('value', 'elapsed').text('elapsed');
-				select2.append('option').attr('value', 'Latency').text('Latency');
+				select2.selectAll('option')
+						.data(metriclist.names).enter().append('option')
+						.attr('value', function(d) { return d; })
+						.text(function(d) { return d; });
+
+				// select2.append('option').attr('value', 'elapsed').text('elapsed');
+				// select2.append('option').attr('value', 'Latency').text('Latency');
 
 				select2.on('change', function() {
 					metric_selected = this.value;
@@ -121,13 +135,13 @@ var myApp = angular.module('myApp', [])
 					// re-draw the plot
 					if ( selected_label === 'ALL' ) { scope.drawPlot(data_bkp, metric_selected); } else { scope.drawPlot(filt_data, metric_selected); }
 
-				})
+				});
 
 				// console.log('@ directive: select is....');
 				// console.log(select);
 				// add another selection for metric
 				// scope.$apply( d3.select('#'.concat(attrs.id))
-				// 						.append('select')
+				// 					.append('select')
 				// 						.attr('id', 'metric')
 				// 						.attr('ng-model', 'metric.name'));
 				// d3.selectAll('#metric').append('option').attr('value', 'elapsedTime').text('elapsedTime');
@@ -140,7 +154,6 @@ var myApp = angular.module('myApp', [])
 
 					// filter the data and redraw the plot
 						select.on('change', function() {
-							console.log(scope.getMetric());
 							console.log('in label select, metric selected = '.concat(metric_selected));
 							selected_label = this.value;
 
@@ -244,22 +257,139 @@ var myApp = angular.module('myApp', [])
 	// so that we can see all the variables at this point
 	// debugger; 
 	return directiveDefinitionObject;
-})
+}])
 .controller('MyMetricController', ['$scope', function($scope){
 	// console.log('hello from MyTSPlotController');
 	window.MyMetricController_scope = $scope;
 	console.log($scope);
+}])
+.directive('jmBarplot', ['metriclist', function(metriclist) {
+	var directiveDefinitionObject = {
+		restrict: 'A',
+		scope: {
+			fileName: '@',
+			folderName: '@'
+		},
+		transclude: true,
+		link: function (scope, elem, attrs) {
+			d3.csv("./data/".concat(scope.folderName, "/", scope.fileName), function(d) {
+				console.log(d);
 
-	$scope.metric = { name: 'DUMMY'};
+						// group by label, perform "average of elapsed time" and "percentile" for each label
+						var groupbyLabel = d3.nest()
+								.key(function(d) { return d.label; })
+								.sortKeys(d3.ascending)
+								// for each group of label perform the below group wise computation
+								.rollup(function(d) {
 
-	$scope.passMetric = function(metric_name) {
-		console.log('metric passed = '.concat(metric_name));
-		$scope.metric.name = metric_name;
-		console.log($scope.metric.name);
+								// d is an array of objects (for each label)
+								//console.log("d inside nest");
+								//console.log(d);
+								// label is same for each of the objects inside the array
+								// because its grouped by label
+								console.log(d[0].label);
+								console.log(d.length);
+								// pluck works on each element of data d
+								console.log(_.pluck(d, 'elapsed').map(function(d2) {return +d2;}).sort(d3.ascending));
+
+									return {
+										// each element of d is passed to the function
+										avg_elapsed: d3.mean(d, function(g) { return +g.elapsed; }),
+										// d3.quantile expects the array to be ordered in ascending
+										// map is used to convert the string elements into numbers
+										percentile: d3.quantile(_.pluck(d, 'elapsed').map(function(d2) {return +d2;}).sort(d3.ascending), 0.90),
+										error_count: _.pluck(d, 'ErrorCount').map(function(d) { return +d; } ).reduce(function(prev, curr) { return prev + curr; }),
+										// throughput
+										sample_count: d.length,
+										//sample_start_time: new Date(+d[0].timeStamp),
+										//sample_end_time: new Date(+d[d.length - 1].timeStamp),
+										//throughput: d.length / (((new Date(+d[d.length - 1].timeStamp) - new Date(+d[0].timeStamp)) / 1000)/60)
+										//max_ts: d3.max(_.pluck(d, 'timeStamp')),
+										//min_ts: d3.min(_.pluck(d, 'timeStamp')),
+										// another strategy is used to get the throughput
+										//throughput: d.length / (((new Date(d3.max(+(_.pluck(d, 'timeStamp')))) - new Date(d3.min(+(_.pluck(d, 'timeStamp'))))) / 1000)/60)
+									};
+								})
+								.entries(d);
+
+						console.log('groupbyLabel');
+						// data here is an array of objects
+						// each object has two properties: 1. key, 2. values
+						// key is a string
+						// values is an object with two properties (1) avg_elapsed (2) percentile
+						console.log(groupbyLabel);
+
+						var margin = {top: 20, right: 20, bottom: 400, left: 100},
+							width = 1000 - margin.left - margin.right,
+							height = 800 - margin.top - margin.bottom;
+						var x = d3.scale.ordinal()
+									.rangeRoundBands([0, width], 0.1);
+
+						var y = d3.scale.linear()
+									.range([height, 0]);
+
+						var xAxis = d3.svg.axis()
+							.scale(x)
+							.orient("bottom");
+
+						var yAxis = d3.svg.axis()
+							.scale(y)
+							.orient("left");
+
+						function make_x_axis() { return d3.svg.axis()
+								.scale(x)
+								.orient("bottom")
+								.ticks(5);
+						}
+
+						function make_y_axis() { return d3.svg.axis()
+								.scale(y)
+								.orient("left")
+								.ticks(5);
+						}
+
+						var svg = d3.select('#'.concat(attrs.id)).append("svg")
+							.attr("width", width + margin.left + margin.right)
+							.attr("height", height + margin.top + margin.bottom)
+						.append("g")
+							.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+						x.domain(groupbyLabel.map(function(d) { return d.key; })); // label for x axis
+						y.domain([0, d3.max(groupbyLabel, function(d) { return +d.values.percentile; })]);
+
+						svg.append("g")
+							.attr("class", "x axis")
+							.attr("transform", "translate(0," + height + ")")
+							.call(xAxis);
+						
+						// rotate the text 90 degrees
+						svg.selectAll(".x.axis text")  // select all the text elements for the xaxis
+							.style("text-anchor", "end")
+							.attr("transform", function(d) {
+									return "translate(" + this.getBBox().height*-1.0 + "," + this.getBBox().height + ")rotate(-90)";
+									//console.log(this.getBBox());
+									//return "translate(" + this.getBBox().height*-1.0 + "," + this.getBBox().height + ")rotate(0)";
+							});
+
+						svg.append("g")
+								.attr("class", "y axis")
+								.call(yAxis);
+
+						svg.selectAll(".bar")
+							.data(groupbyLabel)
+							.enter().append("rect")
+								.attr("class", "bar")
+								.attr("x", function(d) { return x(d.key); })
+								.attr("width", x.rangeBand())
+								.attr("y", function(d) { return y(d.values.percentile); })
+								.attr("height", function(d) { return height - y(d.values.percentile); })
+								.append("title")
+								.text(function(d) {return [ ''.concat(Math.round(d.values.percentile), ' msec | Error Count = ', d.values.error_count,
+															' | Sample Count = ', d.values.sample_count)]; });
+			});
+		}
 	};
 
-	$scope.getMetric = function() {
-		return $scope.metric;
-	};
+	return directiveDefinitionObject;
 
 }]);
