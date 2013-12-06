@@ -251,7 +251,7 @@ var myApp = angular.module('myApp', [])
 			};
 
 		},
-		templateUrl: '/ngd3jmeter/template/jmtsplot_template.html'
+		templateUrl: '/template/jmtsplot_template.html'
 	};
 	// when chrome console is open, it stops at this point
 	// so that we can see all the variables at this point
