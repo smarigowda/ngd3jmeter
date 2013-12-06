@@ -13,5 +13,7 @@ How to use?
 
 6. An option to filter the plot by elapsed or Latency 
 
+7. Bar plot added. Hovering mouse on the bars will diaply more metric
+
 You can see it by visiting: http://smarigowda.github.io/ngd3jmeter/ngJMeter_tsplot.html
     
