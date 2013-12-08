@@ -14,5 +14,7 @@ How to use?
 
 7. Bar plot added. Hovering mouse on the bars will diaply more metric
 
+8. Added throughput plot. Hovering the mouse over the cirle displays the actual value
+
 You can see it by visiting: http://smarigowda.github.io/ngd3jmeter/ngJMeter_tsplot.html
     
