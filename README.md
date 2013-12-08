@@ -1,7 +1,6 @@
 How to use?
 
-1. Clone the repository
-    git clone git@github.com:smarigowda/ngd3jmeter.git
+1. Clone the repository (you need to fork)
 
 2. Start a web server at the root directory of the cloned repository (ngd3jmeter). I use Python command - python -m SimpleHTTPServer 9988
 
