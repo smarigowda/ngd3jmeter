@@ -400,9 +400,6 @@ var myApp = angular.module('myApp', [])
 							console.log('generate a table with stats used to plot the bar graph');
 							// console.log(data);
 
-							scope.$apply(function() { d3.select('#'.concat(attrs.id)).append("input").attr('type', 'text').attr('ng-model', 'name.firstName'); } );
-							scope.$apply(function() { d3.select('#'.concat(attrs.id)).append("span").text('{{name.firstName}}'); } );
-
 							var barplot_table = d3.select('#'.concat(attrs.id)).append("table");
 
 							scope.$apply(barplot_table);
