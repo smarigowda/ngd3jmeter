@@ -1,4 +1,4 @@
-var myApp = angular.module('myApp', [])
+var myApp = angular.module('myApp', ['uiJMRouter'])
 .factory('Data', function() {
 	return { elapsedTime: 0 };
 })
@@ -184,7 +184,7 @@ var myApp = angular.module('myApp', [])
 
 					console.log('ydataLabel = '.concat(ydataLabel));
 
-					var margin = {top: 30, right: 20, bottom: 50, left: 50},
+					var margin = {top: 30, right: 20, bottom: 80, left: 50},
 						width = 1000 - margin.left - margin.right,
 						height = 400 - margin.top - margin.bottom;
 
@@ -250,8 +250,8 @@ var myApp = angular.module('myApp', [])
 						.append("title").text(function(d){ return ''.concat(ydataLabel, " : ", d[ydataLabel], ' : ' , d.label); });
 			};
 
-		},
-		templateUrl: '/template/jmtsplot_template.html'
+		}
+		// templateUrl: '/template/jmtsplot_template.html'
 	};
 	// when chrome console is open, it stops at this point
 	// so that we can see all the variables at this point

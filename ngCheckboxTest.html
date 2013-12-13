@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<!-- <body ng-app="myApp"> -->
+<body ng-app>
+
+	<script src="./vendor/d3.v3.min.js"></script>
+	<script src="./vendor/underscore.js"></script>
+	<script src="./vendor/angular.js"></script>
+	<!-- load css -->
+	<link rel="stylesheet" type="text/css" href="./css/myCSS.css">
+	<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.1.1/css/bootstrap-combined.min.css" rel="stylesheet">
+
+	<h1>User Info</h1>
+	<label>Roles</label>
+	<label class="checkbox">
+		<input type="checkbox" ng-model="user.role" ng-true-value="admin" ng-false-value="basic">
+		Is Administrator
+	</label>
+	
+	<pre ng-bind="user | json"></pre>
+
+</body>

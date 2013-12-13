@@ -19,38 +19,25 @@
 	<div class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
-				<div class="nav">
-					<a class="brand">Home</a>
-					<a class="brand">Plots</a>
-					<a class="brand">Tables</a>
-				</div>
+				<ul class="nav">
+					<li ng-class="{ active: $state.includes('home') }"><a  ui-sref="home">Home</a></li>
+					<li ng-class="{ active: $state.includes('barplots') }"><a ui-sref="barplots">Bar Plot</a></li>
+					<li ng-class="{ active: $state.includes('tsplots') }"><a  ui-sref="tsplots">Time Series Plot</a></li>
+				</ul>
 			</div>
 		</div>
 	</div>
-
-	<div style="margin-top:80px" jm-tsplot 	folder-name="test_001"
-					file-name="aggregate_report_sample.csv"
-					id="plot_001">
-	</div>
-
-	<div jm-tsplot 	folder-name="test_001"
-					file-name="aggregate_report_sample.csv"
-					id="plot_002">
-	</div>
-
-	<div jm-barplot 	folder-name="test_001"
-						file-name="aggregate_report_sample.csv"
-						table-data="yes"
-						id="plot_003">
-	</div>
+	
+	<div ui-view style="margin-top:80px"></div>
 
 	<div> 
 		<pre>
 			$stateParams = {{ $stateParams }}
 			$state = {{ $state }}
+			$state.includes('home') = {{ $state.includes('home') }}
+			$state.includes('barplots') = {{ $state.includes('barplots') }}
+			$state.includes('tsplots') = {{ $state.includes('tsplots') }}
 		</pre>
-
 	</div>
 
-	<div ui-view sref="/"></div>
 </body>
