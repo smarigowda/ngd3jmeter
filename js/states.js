@@ -11,11 +11,11 @@ angular.module('uiJMRouter')
 			})
 			.state("barplots", {
 				url: "/barplots",
-				templateUrl: '/template/jmbar_template.html'
+				templateUrl: 'ngd3jmeter/template/jmbar_template.html'
 			})
 			.state("tsplots", {
 				url: "/tsplots",
-				templateUrl: '/template/jmtsplot_template.html'
+				templateUrl: 'ngd3jmeter/template/jmtsplot_template.html'
 			});
 
 	
