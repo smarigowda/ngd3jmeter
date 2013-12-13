@@ -16,5 +16,5 @@ How to use?
 
 8. Added throughput plot. Hovering the mouse over the cirle displays the actual value
 
-You can see it by visiting: http://smarigowda.github.io/ngd3jmeter/ngJMeter_tsplot.html
+You can see it by visiting: http://smarigowda.github.io/ngd3jmeter/
     
