@@ -1,0 +1,19 @@
+	<div ng-controller="MyController" class="container">
+		<div>
+				<h3><label class="label label-info">Filter by Label</label></h3>
+			 	<input type="text" ng-model="filter_input.label" class="span2"></input> 
+		</div>
+		<div>
+				<h3><label class="label label-info">Filter by elapsedTime</label></h3>
+				<input type="text" ng-model="filter_input.elapsedTime" class="span2"></input>
+				<label> {{ filter_input.elapsedTime }} </label>
+		</div>
+	<div>
+
+	<div 	jm-table-raw 	
+			class="container" 
+			folder-name="test_001"
+			file-name="aggregate_report_sample.csv"
+			id="plot_001"
+			table-data="tableData">
+	</div>
