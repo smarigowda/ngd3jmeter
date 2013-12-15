@@ -511,7 +511,7 @@ var myApp = angular.module('myApp', ['uiJMRouter'])
 	};
 	return directiveDefinitionObject;
 }])
-.directive('jmTableRaw', ['metriclist', function(metriclist) {
+.directive('jmTableRaw', ['metriclist', 'Data', '$compile', function(metriclist, Data, $compile) {
 	var directiveDefinitionObject = {
 		restrict: 'A',
 		scope: {
@@ -526,6 +526,8 @@ var myApp = angular.module('myApp', ['uiJMRouter'])
 			d3.csv("./data/".concat(scope.folderName, "/", scope.fileName), function(d) {
 						window.mydirscope = scope;
 
+						scope.filter_input = Data;
+
 						// data will be available in controller
 						// two way binding?
 						scope.data = d;
@@ -535,14 +537,30 @@ var myApp = angular.module('myApp', ['uiJMRouter'])
 												
 						console.log(filter_input);
 
+						// data binding of elements created by d3.
+						var htmlinput = d3.select('#'.concat(attrs.id))
+											.append("input")
+												.attr("type", "text")
+												.attr("ng-model", "filter_input.elapsedTime")
+												.attr("ng-controller", "MyController");
+
+						console.log('htmlinput');
+						console.log(htmlinput[0][0]); // the HTML text
+
+						// compile the template
+						var linkFn = $compile(htmlinput[0][0]);
+
+						// link the template with scope
+						var element = linkFn(scope);
+
 						scope.$watch('filter_input.label', function() {
-							console.log('resp time value changing...');
+							// console.log('resp time value changing...');
 							redraw(scope.filter_input, scope.data, table_row, raw_table, attrs.id);
 						});
 
 						scope.$watch('filter_input.elapsedTime', function() {
-							console.log('elapsed time changing...');
-							console.log(scope.filter_input.elapsedTime);
+							// console.log('elapsed time changing...');
+							// console.log(scope.filter_input.elapsedTime);
 							redraw(scope.filter_input, scope.data, table_row, raw_table, attrs.id);
 						});
 
@@ -550,8 +568,8 @@ var myApp = angular.module('myApp', ['uiJMRouter'])
 
 						scope.$apply(raw_table);
 						
-						raw_table.append('th').text('Label');
-						raw_table.append('th').text('elapsed');
+						// raw_table.append('th').text('Label');
+						// raw_table.append('th').text('elapsed');
 						
 						var table_row = raw_table.selectAll('tbody')
 											.data(d)
@@ -564,22 +582,22 @@ var myApp = angular.module('myApp', ['uiJMRouter'])
 
 			function redraw(filter_val, d, table_row, raw_table, attr_id) {
 
-				console.log('redraw table.....' + new Date());
-				console.log(d);
-				console.log(filter_val.label);
-				console.log(filter_val.elapsedTime);
-				console.log(table_row);
+				// console.log('redraw table.....' + new Date());
+				// console.log(d);
+				// console.log(filter_val.label);
+				// console.log(filter_val.elapsedTime);
+				// console.log(table_row);
 
 				var filt_data = d;
 				
 				var rexLabel = new RegExp('.*'.concat(filter_val.label, '.*'));
 				var rexElapsed = new RegExp('.*'.concat(filter_val.elapsedTime, '.*'));
 
-				console.log(rexElapsed);
+				// console.log(rexElapsed);
 
 				filt_data = _.filter(d, function(d) {  return rexLabel.test(d.label) && rexElapsed.test(d.elapsed); });
 
-				console.log(filt_data);
+				// console.log(filt_data);
 
 				raw_table.selectAll('*').remove();
 
