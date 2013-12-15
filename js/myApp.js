@@ -1,14 +1,32 @@
 var myApp = angular.module('myApp', ['uiJMRouter'])
 .factory('Data', function() {
-	return { elapsedTime: 0 };
+	return {
+				elapsedTime: '',
+				label: ''
+	};
 })
 .factory('metriclist', function(){
+	// headers of data file
 	return { names: [ 'elapsed', 'Latency', 'SampleCount' ] };
 })
 // note that $injector can be injected!
 .controller('MyController', ['$scope', 'Data', '$injector', function($scope, Data, $injector){
-  $scope.resp_time = Data;
-  window.scope = $scope;
+  $scope.filter_input = Data;
+
+
+  // the scope variables received by the directive is also available to controller
+  // file name, folder name etc... are available to the controller
+  window.mycontrollerscope = $scope;
+
+}])
+.controller('MyController2', ['$scope', 'Data', '$injector', function($scope, Data, $injector){
+  $scope.filter_input = Data;
+
+
+  // the scope variables received by the directive is also available to controller
+  // file name, folder name etc... are available to the controller
+  window.mycontrollerscope2 = $scope;
+
 }])
 .controller('MyReportController', ['$scope', function($scope){
 	$scope.tgreport = {};
@@ -57,8 +75,7 @@ var myApp = angular.module('myApp', ['uiJMRouter'])
 			// var file_name = 'tg_startend_report.txt';
 			// var folder_name = 'iml_Nov2013/29112013_145001_BASELINE_50TCHR_500STU';
 		
-		},
-		templateUrl: 'template.html'
+		}
 	};
 })
 .directive('jmTsplot', ['metriclist', function(metriclist) {
@@ -81,6 +98,7 @@ var myApp = angular.module('myApp', ['uiJMRouter'])
 			// console.log('@ directive file name = '.concat(attrs.fileName));
 			
 			d3.csv("./data/".concat(scope.folderName, "/", scope.fileName), function(data) {
+
 				// console.log('data @ controller'.concat(data));
 
 				// create a selection html element
@@ -178,7 +196,6 @@ var myApp = angular.module('myApp', ['uiJMRouter'])
 				scope.drawPlot(data_bkp, metric_selected);
 
 			});
-			
 
 			scope.drawPlot = function(data, ydataLabel) {
 
@@ -342,8 +359,6 @@ var myApp = angular.module('myApp', ['uiJMRouter'])
 							.scale(y)
 							.orient("left");
 
-
-
 						function make_x_axis() { return d3.svg.axis()
 								.scale(x)
 								.orient("bottom")
@@ -418,13 +433,187 @@ var myApp = angular.module('myApp', ['uiJMRouter'])
 							table_row.append('td').text(function(d) { return d.values.error_count; });
 
 						};
-
-						// element attribute to control the display of table data
-						if ( scope.tableData === 'yes' ) { genTable(groupbyLabel); }
 			});
 		}
 	};
 
 	return directiveDefinitionObject;
 
+}])
+.directive('jmTableAggregate', ['metriclist', function(metriclist) {
+	var directiveDefinitionObject = {
+		restrict: 'A',
+		scope: {
+			fileName: '@',
+			folderName: '@',
+		},
+		transclude: true,
+		link: function (scope, elem, attrs) {
+
+			d3.csv("./data/".concat(scope.folderName, "/", scope.fileName), function(d) {
+						console.log('data read by jmTableAggregate');
+						console.log(d);
+
+						var groupbyLabel = d3.nest()
+								.key(function(d) { return d.label; })
+								.sortKeys(d3.ascending)
+								// for each group of label perform the below group wise computation
+								.rollup(function(d) {
+
+								// d is an array of objects (for each label)
+								//console.log("d inside nest");
+								//console.log(d);
+								// label is same for each of the objects inside the array
+								// because its grouped by label
+								console.log(d[0].label);
+								console.log(d.length);
+								// pluck works on each element of data d
+								console.log(_.pluck(d, 'elapsed').map(function(d2) {return +d2;}).sort(d3.ascending));
+
+									return {
+										// each element of d is passed to the function
+										avg_elapsed: d3.mean(d, function(g) { return +g.elapsed; }),
+										// d3.quantile expects the array to be ordered in ascending
+										// map is used to convert the string elements into numbers
+										percentile: d3.quantile(_.pluck(d, 'elapsed').map(function(d2) {return +d2;}).sort(d3.ascending), 0.90),
+										error_count: _.pluck(d, 'ErrorCount').map(function(d) { return +d; } ).reduce(function(prev, curr) { return prev + curr; }),
+										// throughput
+										sample_count: d.length,
+										//sample_start_time: new Date(+d[0].timeStamp),
+										//sample_end_time: new Date(+d[d.length - 1].timeStamp),
+										//throughput: d.length / (((new Date(+d[d.length - 1].timeStamp) - new Date(+d[0].timeStamp)) / 1000)/60)
+										//max_ts: d3.max(_.pluck(d, 'timeStamp')),
+										//min_ts: d3.min(_.pluck(d, 'timeStamp')),
+										// another strategy is used to get the throughput
+										//throughput: d.length / (((new Date(d3.max(+(_.pluck(d, 'timeStamp')))) - new Date(d3.min(+(_.pluck(d, 'timeStamp'))))) / 1000)/60)
+									};
+								})
+								.entries(d);
+
+						var barplot_table = d3.select('#'.concat(attrs.id)).append("table");
+
+						scope.$apply(barplot_table);
+						
+						barplot_table.append('th').text('Label');
+						barplot_table.append('th').text('Percentile');
+						barplot_table.append('th').text('error_count');
+
+						var table_row = barplot_table.selectAll('tbody')
+											.data(groupbyLabel)
+											.enter().append('tbody')
+											.append('tr');
+
+						table_row.append('td').text(function(d) { return d.key; });
+						table_row.append('td').text(function(d) { return d.values.percentile.toFixed(0); });
+						table_row.append('td').text(function(d) { return d.values.error_count; });
+			});
+		}
+	};
+	return directiveDefinitionObject;
+}])
+.directive('jmTableRaw', ['metriclist', 'Data', '$compile', function(metriclist, Data, $compile) {
+	var directiveDefinitionObject = {
+		restrict: 'A',
+		scope: {
+			fileName: '@',
+			folderName: '@',
+			data: '=tableData'
+		},
+		transclude: true,
+		controller: 'MyController',
+		link: function (scope, elem, attrs) {
+
+			d3.csv("./data/".concat(scope.folderName, "/", scope.fileName), function(d) {
+				
+						window.mydirscope = scope;
+						scope.filter_input = Data;
+
+						// data will be available in controller
+						// two way binding?
+						scope.data = d;
+						var filter_input;
+						console.log('data read by jmTableAggregate');
+						console.log(d);
+												
+						console.log(filter_input);
+
+						// data binding of elements created by d3.
+						// var htmlinput = d3.select('#'.concat(attrs.id))
+						// 					.append("input")
+						// 						.attr("type", "text")
+						// 						.attr("ng-model", "filter_input.elapsedTime")
+						// 						.attr("ng-controller", "MyController");
+
+						// console.log('htmlinput');
+						// console.log(htmlinput[0][0]); // the HTML text
+
+						// // compile the template
+						// var linkFn = $compile(htmlinput[0][0]);
+
+						// // link the template with scope
+						// var element = linkFn(scope);
+
+						scope.$watch('filter_input.label', function() {
+							// console.log('resp time value changing...');
+							redraw(scope.filter_input, scope.data, table_row, raw_table, attrs.id);
+						});
+
+						scope.$watch('filter_input.elapsedTime', function() {
+							// console.log('elapsed time changing...');
+							// console.log(scope.filter_input.elapsedTime);
+							redraw(scope.filter_input, scope.data, table_row, raw_table, attrs.id);
+						});
+
+						var raw_table = d3.select('#'.concat(attrs.id)).append("table");
+
+						scope.$apply(raw_table);
+						
+						// raw_table.append('th').text('Label');
+						// raw_table.append('th').text('elapsed');
+						
+						var table_row = raw_table.selectAll('tbody')
+											.data(d)
+											.enter().append('tbody')
+											.append('tr');
+
+						table_row.append('td').text(function(d) { return d.label; });
+						table_row.append('td').text(function(d) { return d.elapsed; });
+			});
+
+			function redraw(filter_val, d, table_row, raw_table, attr_id) {
+
+				// console.log('redraw table.....' + new Date());
+				// console.log(d);
+				// console.log(filter_val.label);
+				// console.log(filter_val.elapsedTime);
+				// console.log(table_row);
+
+				var filt_data = d;
+				
+				var rexLabel = new RegExp('.*'.concat(filter_val.label, '.*'));
+				var rexElapsed = new RegExp('.*'.concat(filter_val.elapsedTime, '.*'));
+
+				// console.log(rexElapsed);
+				filt_data = _.filter(d, function(d) {  return rexLabel.test(d.label) && rexElapsed.test(d.elapsed); });
+
+				// console.log(filt_data);
+
+				raw_table.selectAll('*').remove();
+
+				raw_table.append('th').text('Label');
+				raw_table.append('th').text('elapsed');
+
+				table_row = raw_table.selectAll('tbody')
+									.data(filt_data)
+									.enter().append('tbody')
+									.append('tr');
+
+				table_row.append('td').text(function(d) { return d.label; });
+				table_row.append('td').text(function(d) { return d.elapsed; });
+
+			}
+		}
+	};
+	return directiveDefinitionObject;
 }]);
+

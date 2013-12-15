@@ -18,6 +18,4 @@ angular.module('uiJMRouter')
 				templateUrl: '/ngd3jmeter/template/jmtsplot_template.html'
 			});
 
-	
-
-    }]);
+	}]);

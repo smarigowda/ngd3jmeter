@@ -1,0 +1,22 @@
+	<div class="container" ng-controller="MyController">
+		<div class="row">
+			<div class="span2">
+					<h3><label class="label label-info">Label</label></h3>
+				 	<input type="text" ng-model="filter_input.label" class="span2"></input>
+			</div>
+
+			<div class="span2">
+					<h3><label class="label label-info">elapsed</label></h3>
+					<input type="text" ng-model="filter_input.elapsedTime" 	class="span2"></input>
+			</div>
+		
+		</div>
+	</div>
+
+	<div 	jm-table-raw 	
+			class="container" 
+			folder-name="test_001"
+			file-name="aggregate_report_sample.csv"
+			id="plot_001"
+			table-data="tableData">
+	</div>
