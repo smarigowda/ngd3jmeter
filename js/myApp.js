@@ -524,8 +524,8 @@ var myApp = angular.module('myApp', ['uiJMRouter'])
 		link: function (scope, elem, attrs) {
 
 			d3.csv("./data/".concat(scope.folderName, "/", scope.fileName), function(d) {
+				
 						window.mydirscope = scope;
-
 						scope.filter_input = Data;
 
 						// data will be available in controller
@@ -538,20 +538,20 @@ var myApp = angular.module('myApp', ['uiJMRouter'])
 						console.log(filter_input);
 
 						// data binding of elements created by d3.
-						var htmlinput = d3.select('#'.concat(attrs.id))
-											.append("input")
-												.attr("type", "text")
-												.attr("ng-model", "filter_input.elapsedTime")
-												.attr("ng-controller", "MyController");
+						// var htmlinput = d3.select('#'.concat(attrs.id))
+						// 					.append("input")
+						// 						.attr("type", "text")
+						// 						.attr("ng-model", "filter_input.elapsedTime")
+						// 						.attr("ng-controller", "MyController");
 
-						console.log('htmlinput');
-						console.log(htmlinput[0][0]); // the HTML text
+						// console.log('htmlinput');
+						// console.log(htmlinput[0][0]); // the HTML text
 
-						// compile the template
-						var linkFn = $compile(htmlinput[0][0]);
+						// // compile the template
+						// var linkFn = $compile(htmlinput[0][0]);
 
-						// link the template with scope
-						var element = linkFn(scope);
+						// // link the template with scope
+						// var element = linkFn(scope);
 
 						scope.$watch('filter_input.label', function() {
 							// console.log('resp time value changing...');
@@ -594,7 +594,6 @@ var myApp = angular.module('myApp', ['uiJMRouter'])
 				var rexElapsed = new RegExp('.*'.concat(filter_val.elapsedTime, '.*'));
 
 				// console.log(rexElapsed);
-
 				filt_data = _.filter(d, function(d) {  return rexLabel.test(d.label) && rexElapsed.test(d.elapsed); });
 
 				// console.log(filt_data);
@@ -613,7 +612,6 @@ var myApp = angular.module('myApp', ['uiJMRouter'])
 				table_row.append('td').text(function(d) { return d.elapsed; });
 
 			}
-
 		}
 	};
 	return directiveDefinitionObject;
