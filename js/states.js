@@ -16,6 +16,13 @@ angular.module('uiJMRouter')
 			.state("tsplots", {
 				url: "/tsplots",
 				templateUrl: '/ngd3jmeter/template/jmtsplot_template.html'
+			})
+			.state("tables", {
+					url: "/tables",
+					templateUrl: '/ngd3jmeter/template/jmtable_template.html'
+			})
+			.state("tableraw", {
+					url: "/tableraw",
+					templateUrl: '/ngd3jmeter/template/jmtableraw_template.html'
 			});
-
 	}]);
