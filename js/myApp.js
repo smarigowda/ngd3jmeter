@@ -409,30 +409,6 @@ var myApp = angular.module('myApp', ['uiJMRouter'])
 								.append("title")
 								.text(function(d) {return [ ''.concat(Math.round(d.values.percentile), ' msec | Error Count = ', d.values.error_count,
 															' | Sample Count = ', d.values.sample_count)]; });
-
-						var genTable = function(data) {
-							
-							console.log('generate a table with stats used to plot the bar graph');
-							// console.log(data);
-
-							var barplot_table = d3.select('#'.concat(attrs.id)).append("table");
-
-							scope.$apply(barplot_table);
-							
-							barplot_table.append('th').text('Label');
-							barplot_table.append('th').text('Percentile');
-							barplot_table.append('th').text('error_count');
-
-							var table_row = barplot_table.selectAll('tbody')
-												.data(data)
-												.enter().append('tbody')
-												.append('tr');
-
-							table_row.append('td').text(function(d) { return d.key; });
-							table_row.append('td').text(function(d) { return d.values.percentile.toFixed(0); });
-							table_row.append('td').text(function(d) { return d.values.error_count; });
-
-						};
 			});
 		}
 	};
