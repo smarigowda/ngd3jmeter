@@ -7,7 +7,7 @@ angular.module('uiJMRouter')
 		$stateProvider
 			.state("home", {
 				url: "/",
-				template: '<h1> Welcome to my JMeter Analysis Tool</h1>'
+				template: '<h1> Welcome to JMeter Analysis Tool</h1>'
 			})
 			.state("barplots", {
 				url: "/barplots",
