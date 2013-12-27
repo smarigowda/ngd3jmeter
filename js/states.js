@@ -24,5 +24,9 @@ angular.module('uiJMRouter')
 			.state("tableraw", {
 				url: "/tableraw",
 				templateUrl: '/template/jmtableraw_template.html'
+			})			
+			.state("explorejtl", {
+				url: "/explorejtl",
+				templateUrl: '/template/jmexplorejtl_template.html'
 			});
     }]);

@@ -5,18 +5,10 @@
 <body ng-app="myApp">
 
 	<script src="./vendor/d3.v3.min.js"></script>
-	<script src="./bower_components/jquery/jquery.js"></script>
 	<script src="./vendor/underscore.js"></script>
 	<script src="./vendor/angular.js"></script>
 	<script src="./vendor/angular-ui-router.js"></script>
-	<script src="./js/controller.js"></script>
-	<script src="./js/directive/jmtsplot.js"></script>
-	<script src="./js/directive/jmbarplot.js"></script>
-	<script src="./js/directive/jmtableaggregate.js"></script>
-	<script src="./js/directive/jmtableraw.js"></script>
-	<script src="./js/directive/jmexplorejtl.js"></script>
 	<script src="./js/myApp.js"></script>
-
 	<script src="./js/module.js"></script>
 	<script src="./js/states.js"></script>
 	<script src="./bower_components/d3-tip/index.js"></script>
@@ -35,8 +27,6 @@
 					<li ng-class="{ active: $state.includes('tsplots') }"><a  ui-sref="tsplots">Time Series Plot</a></li>
 					<li ng-class="{ active: $state.includes('tables') }"><a  ui-sref="tables">Aggregate Table</a></li>
 					<li ng-class="{ active: $state.includes('tableraw') }"><a  ui-sref="tableraw">All Trans Table</a></li>
-					<li ng-class="{ active: $state.includes('explorejtl') }"><a  ui-sref="explorejtl">Explore JTL</a></li>
-
 				</ul>
 			</div>
 		</div>
@@ -51,7 +41,6 @@
 			$state.includes('home') = {{ $state.includes('home') }}
 			$state.includes('barplots') = {{ $state.includes('barplots') }}
 			$state.includes('tsplots') = {{ $state.includes('tsplots') }}
-			$state.includes('explorejtl') = {{ $state.includes('explorejtl') }}
 		</pre>
 	</div>
 
