@@ -21,6 +21,43 @@
 	<script src="./js/states.js"></script>
 	<script src="./bower_components/d3-tip/index.js"></script>
 
+	<style>
+
+	body {
+	  font: 10px sans-serif;
+	}
+
+	.axis path,
+	.axis line {
+	  fill: none;
+	  stroke: #000;
+	  shape-rendering: crispEdges;
+	}
+
+	.x.axis path {
+	  display: none;
+	}
+
+	.line {
+	  fill: none;
+	  stroke: steelblue;
+	  stroke-width: 1.5px;
+	}
+
+	div.tooltip {   
+	  position: absolute;           
+	  text-align: left;           
+	  width: 300px;                  
+	  height: 28px;                 
+	  padding: 2px;             
+	  font: 12px sans-serif;        
+	  border: 0px;      
+	  border-radius: 8px;           
+	  pointer-events: none;         
+	}
+
+	</style>
+
 	<!-- load css -->
 	<link rel="stylesheet" type="text/css" href="./css/myCSS.css">
 	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">

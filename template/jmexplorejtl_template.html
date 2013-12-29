@@ -8,11 +8,27 @@
 			<div class="row">
 				<div class="span2">
 						<h3><label class="label label-info">label filter</label></h3>
-					 	<input type="text" ng-model="input.label" class="span2"></input>
+					 	<input 	type="text" 
+					 			ng-model="input.label" 
+					 			class="span2"
+					 			ng-init="input.label='mp3'">
+					 	</input>
 				</div>
 				<div class="span2">
 						<h3><label class="label label-info">elapsed filter</label></h3>
-						<input type="text" ng-model="input.elapsed" class="span2"></input>
+						<input 	type="text" 
+								ng-model="input.elapsed" 
+								class="span2"
+								ng-init="input.elapsed='1'">
+						</input>
+				</div>
+				<div class="span2">
+						<h3><label class="label label-info">click..</label></h3>
+						<button 	type="button"
+									class="btn btn-default"
+									class="span1"
+									ng-click="display()">Diplay
+						</button>
 				</div>
 			</div>
 
