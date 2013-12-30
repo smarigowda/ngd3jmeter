@@ -11,107 +11,86 @@ myApp
 		controller: 'myd3Controller',
 		link: function (scope, elem, attrs) {
 
-				console.log(window);
-
 				scope.getData(scope.fileName, scope.folderName).then(function(data) {
 
-					// console.log(data);
+					// console.log('zipppp');
+					// console.log(_.zip.apply(_, data));
 
-					// var groupbyLabel2 = d3.nest()
-					// 						.key(function(d) { return d.label; })
-					// 						.sortKeys(d3.ascending)
-					// 						.rollup(function(d) {
-					// 							return {
-					// 								label: d.label,
-					// 								timestamp: d.timeStamp,
-					// 								elapsed: d.elapsed
-					// 							};
-					// 						})
-					// 						.entries(data);
-					// console.log(groupbyLabel2);
+					var data3 = {
+							timeStamp: _.map(data, function(d) {
+											return +d.timeStamp;
+										}),
+							elapsed:  _.map(data, function(d) {
+											return +d.elapsed;
+										}),
+							Latency:  _.map(data, function(d) {
+											return +d.Latency;
+										})
+					};
 
-					// mapping
-
+					// select only the required group of data
 					var data2 = _.map(data, function(d) {
 						return {
 							values: {
 								timeStamp: d.timeStamp,
 								label: d.label,
-								elapsed: d.elapsed
+								elapsed: d.elapsed,
+								Latency: d.Latency
 							}
 						};
 					});
-					// console.log(data2);
 
-					var mapdata = _.map(data[0], function(d) { return d; } );
-					// console.log(mapdata);
+					console.log(data2);
 
-					// use unique data labels
+					// unique labels
 					var labels = _.uniq(data.map(function(d) { return d.label; } ));
-
 					console.log(labels);
-					var result = {};
-					var x = _.map(labels, function(d) {
-							// return d;
-						// result[d] = _.filter(data2, function(d2) {
-							// console.log(d2.label);
-							// return d2.values.label === d;
-						// });
-							return _.map(data2, function(d2) {
-								if (d === d2.values.label ) {
-									return {
-										label: d2.values.label,
-										values: {
-											timestamp: d2.values.timestamp,
-											label: d2.values.label,
-											elapsed: d2.values.elapsed
-										}
-									};
-								}
-							});
-							// label: d
-						// return d;
-					});
 
-					console.log(x);
-
-					var xfilt = _.map(x, function(d) {
-						return _.filter(d, function(d2) {
-								return d2 !== undefined;
-						});
-					});
-
-					// var xfilt = 
-					console.log(xfilt);
-
-					var x2 = _.map(labels, function(d2) {
+					var data_multiline = _.map(labels, function(d2) {
 									return {
 										label: d2,
-										// values: {
+										// an array of objects, for each matching label
+										// values : _.filter(_.map(data2, function(d) {
+										// 		// map only the rows matching label
+										// 		if (d2 === d.values.label) {
+										// 			return {
+										// 				elapsed: +d.values.elapsed,
+										// 				timeStamp: +d.values.timeStamp
+										// 			};
+										// 		}
+										// }), function(d) { return d !== undefined })
 
-										values : _.filter(_.map(data2, function(d) {
-												if (d2 === d.values.label) {
-													return {
-														elapsed: +d.values.elapsed,
-														timeStamp: +d.values.timeStamp
-													}
-												}
-										}), function(d) { return d !== undefined })
-										// values: _.map(data2, function(d3) {
-											// return {
-											// 	timestamp: d3.values.timestamp,
-											// 	label: d3.values.label,
-											// 	elapsed: d3.values.elapsed
-											// };
-										// });
-										// }
-									}
+										// values : _.compact(_.map(data2, function(d) {
+										// 			// map only the rows matching label
+										// 			if (d2 === d.values.label) {
+										// 				return {
+										// 					elapsed: +d.values.elapsed,
+										// 					timeStamp: +d.values.timeStamp
+										// 				};
+										// 			}
+										// 		}))
+
+										values : _.chain(data2)
+													.map(function(d) {
+														// map only the rows matching label
+														if (d2 === d.values.label) {
+															return {
+																elapsed: +d.values.elapsed,
+																timeStamp: +d.values.timeStamp
+															};
+														}
+													})
+													.compact()
+													.tap(function(d) { alert(d); })
+													.value()
+
+									};
 					});
 
-					console.log(x2);
+					console.log(data_multiline);
 
 					// console.log(result);
-					scope.drawPlotMultiLine(x2, labels, data);
+					scope.drawPlotMultiLine(data_multiline, labels, data3);
 
 					var metric_selected = 'elapsed';
 					var selected_label = 'ALL';
@@ -270,17 +249,15 @@ myApp
 
 				d3.select('#'.concat(attrs.id)).append("p").append("h1").text(attrs.title);
 
-				var div = d3.select('#'.concat(attrs.id)).append("div")   
-					.attr("class", "tooltip")               
-					.style("opacity", 0);
+				var div = d3.select('#'.concat(attrs.id)).append("div")
+								.attr("class", "tooltip")
+								.style("opacity", 0);
 
-				// console.log(data);
-
-				var margin = {top: 20, right: 100, bottom: 100, left: 100},
+				var margin = { top: 20, right: 100, bottom: 100, left: 100 },
 					width = 1500 - margin.left - margin.right,
 					height = 500 - margin.top - margin.bottom;
 				
-				var parseDate = d3.time.format("%Y%m%d").parse;
+				// var parseDate = d3.time.format("%Y%m%d").parse;
 
 				var x = d3.time.scale()
 					.range([0, width]);
@@ -306,30 +283,20 @@ myApp
 					.append("g")
 					.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-				// _.each(data, function(d) { console.log(parseDate(d[0].timestamp)); });
-
 				var line = d3.svg.line()
 					// .interpolate("basis")
 					.interpolate("linear")
 					.x(function(d) { return x(d.timeStamp); })
 					.y(function(d) { return y(d.elapsed); });
 
-				// console.log(labels);
-
-				// console.log(orig_data);
-
-				_.each(orig_data, function(d) { d.timeStamp = +d.timeStamp; });
-				_.each(orig_data, function(d) { d.elapsed = +d.elapsed; });
-				x.domain(d3.extent(_.pluck(orig_data, 'timeStamp')));
-
-				// console.log(x.domain());
+				// _.each(orig_data, function(d) { d.timeStamp = +d.timeStamp; });
+				// _.each(orig_data, function(d) { d.elapsed = +d.elapsed; });
+				x.domain(d3.extent(orig_data.timeStamp));
 
 				y.domain([
-					d3.min(orig_data, function(c) { return c.elapsed; }),
-					d3.max(orig_data, function(c) { return c.elapsed; })
+					d3.min(orig_data.elapsed),
+					d3.max(orig_data.elapsed)
 				]);
-
-				// console.log(y.domain());
 
 				svg.append("g")
 						.attr("class", "x axis")
@@ -353,79 +320,46 @@ myApp
 						// console.log(this.getBBox());
 						return "translate(" + this.getBBox().height*-1.0 + "," + this.getBBox().height + ")rotate(-90)"; });
 						// console.log(this.getBBox());
-						//return "translate(" + this.getBBox().height*-1.0 + "," + this.getBBox().height + ")rotate(0)"; */
 
-
-				console.log(svg);
-
-
-
-				console.log(data);
-
-				window.svg = svg;
-				window.data = data;
-
-				var labels = svg.selectAll(".city")
+				var labels = svg.selectAll(".labels")
 						.data(data)
+						// data is an array. Each array element has 'label' and 'values'
+						// values object has timeStamp, elapsed and Latency
 						.enter().append("g")
-						.attr("class", "city");
-
-				// console.log(svg);
-
-
-				// console.log(labels);
+						.attr("class", "labels");
 
 				labels.append("path")
 						.attr("class", "line")
 						.attr("d", function(d) {
-							// console.log(line(d.values));
 							return line(d.values);
+							// d.values is an array
+							// each element is an object 
+							// having 'timeStamp', 'elapsed' and 'Latency'
 						})
 						.style("stroke", function(d) {
+							// console.log(color(d.label));
 							return color(d.label);
 						})
 						.on("mouseover", function(d, i) {
-							console.log(d3.mouse(this));
-							console.log(d3.event);
-							console.log(d3.event.timeStamp);
-							console.log(d);
-							console.log(i);
+							// console.log(d3.mouse(this));
+							// console.log(d3.event);
+							// console.log(d3.event.timeStamp);
+							// console.log(d);
+							// console.log(i);
 							// console.log({"x": d3.event.x, "y": d3.event.y});
 							div.transition()
 								.duration(0)
-								.style("opacity", .9);
+								.style("opacity", 1.0);
 
 							div.html(d.label)
 								.style("left", (d3.event.pageX) + "px")
 								.style("top", (d3.event.pageY - 28) + "px");
 						})
 						.on("mouseout", function(d) {
-							div.transition()      
+							div.transition()
 								.duration(2000)
 								.style("opacity", 0);
 						});
-
-				labels.append("text")
-						.datum(function(d) {
-							return {
-								label: d.label, 
-								value: d.values[d.values.length - 1]
-							};
-						})
-						// .datum(function(d) { return {label: d.label, value: d.values[0]}; })
-						.attr("transform", function(d) {
-							return "translate(" + x(d.value.timeStamp) + "," + y(d.value.elapsed) + ")";
-						})
-						.attr("x", 3)
-						.attr("dy", ".35em")
-						// .text(function(d) { return d.label; })
-						.on('mouseover', function(d) {
-							console.log('mouseover event fired...');
-						});
-
-				// console.log(data['S01_IR_T01_HOME']);
-				// var line1 = line(data['S01_IR_T01_HOME']);
-				// console.log(line1);
 			}
 
 		}
