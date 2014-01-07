@@ -13,6 +13,8 @@ myApp
 
 				scope.getData(scope.fileName, scope.folderName).then(function(data) {
 
+					window.csvdata = data;
+
 					// console.log('zipppp');
 					// console.log(_.zip.apply(_, data));
 
@@ -40,36 +42,12 @@ myApp
 						};
 					});
 
-					console.log(data2);
-
 					// unique labels
 					var labels = _.uniq(data.map(function(d) { return d.label; } ));
-					console.log(labels);
 
 					var data_multiline = _.map(labels, function(d2) {
 									return {
 										label: d2,
-										// an array of objects, for each matching label
-										// values : _.filter(_.map(data2, function(d) {
-										// 		// map only the rows matching label
-										// 		if (d2 === d.values.label) {
-										// 			return {
-										// 				elapsed: +d.values.elapsed,
-										// 				timeStamp: +d.values.timeStamp
-										// 			};
-										// 		}
-										// }), function(d) { return d !== undefined })
-
-										// values : _.compact(_.map(data2, function(d) {
-										// 			// map only the rows matching label
-										// 			if (d2 === d.values.label) {
-										// 				return {
-										// 					elapsed: +d.values.elapsed,
-										// 					timeStamp: +d.values.timeStamp
-										// 				};
-										// 			}
-										// 		}))
-
 										values : _.chain(data2)
 													.map(function(d) {
 														// map only the rows matching label
@@ -81,16 +59,15 @@ myApp
 														}
 													})
 													.compact()
-													.tap(function(d) { alert(d); })
+													// .tap(function(d) { alert(d); })
 													.value()
-
 									};
 					});
 
 					console.log(data_multiline);
 
 					// console.log(result);
-					scope.drawPlotMultiLine(data_multiline, labels, data3);
+					scope.drawPlotMultiLine(data_multiline, data3);
 
 					var metric_selected = 'elapsed';
 					var selected_label = 'ALL';
@@ -245,7 +222,7 @@ myApp
 			};
 
 
-			scope.drawPlotMultiLine = function(data, labels, orig_data) {
+			scope.drawPlotMultiLine = function(data, orig_data) {
 
 				d3.select('#'.concat(attrs.id)).append("p").append("h1").text(attrs.title);
 
