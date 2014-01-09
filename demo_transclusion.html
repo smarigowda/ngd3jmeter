@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<!-- <body ng-app="myApp"> -->
+<body ng-app="myApp2" ng-init="model= {show: true, count: 0}">
+
+	<script src="./vendor/d3.v3.min.js"></script>
+	<script src="./vendor/underscore.js"></script>
+	<script src="./vendor/angular.js"></script>
+	<script src="./vendor/angular-ui-router.js"></script>
+	<script src="./js/myApp2.js"></script>
+	<script src="./js/module.js"></script>
+	<script src="./js/states.js"></script>
+	<script src="./bower_components/d3-tip/index.js"></script>
+
+	<!-- load css -->
+	<link rel="stylesheet" type="text/css" href="./css/myCSS.css">
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+
+		<!-- <test-dir ng-init="type='success'" ng-init="model= {show: true, count: 0}"> -->
+		<!-- there can be only one ng-init -->
+	<!-- 	<test-dir>
+				<h1 ng-init="type='info'"> Hello HTML... </h1>
+		</test-dir>
+	 -->	
+		<button type="button" class="btn btn-primary" ng-click="model.show = !model.show">
+		￼￼￼￼￼  Toggle div
+		</button>
+
+		<div if="model.show" ng-init="model.count=model.count+1" ng-model="count.id"> 
+			Shown {{model.count}} times
+		</div>
+
+		<div ng-controller="testcontroller">
+			<input ng-model='name'>
+			{{getName()}}
+		</div>	
+		<div ng-controller="testcontroller">
+			<input ng-model='name'>
+			<div ng-show='false'>
+				{{getNameLog()}}
+			</div>
+		</div>	
+</body>

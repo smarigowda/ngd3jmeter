@@ -24,5 +24,13 @@ angular.module('uiJMRouter')
 			.state("tableraw", {
 					url: "/tableraw",
 					templateUrl: '/ngd3jmeter/template/jmtableraw_template.html'
+			})		
+			.state("explorejtl", {
+				url: "/explorejtl",
+				templateUrl: '/ngd3jmeter/template/jmexplorejtl_template.html'
+			})
+			.state("thrplots", {
+				url: "/thrplots",
+				templateUrl: '/ngd3jmeter/template/jmthrplot_template.html'
 			});
 	}]);

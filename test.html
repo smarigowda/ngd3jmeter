@@ -5,59 +5,13 @@
 <body ng-app="myApp">
 
 	<script src="./vendor/d3.v3.min.js"></script>
-	<script src="./bower_components/jquery/jquery.js"></script>
 	<script src="./vendor/underscore.js"></script>
 	<script src="./vendor/angular.js"></script>
 	<script src="./vendor/angular-ui-router.js"></script>
-	<script src="./js/controller.js"></script>
-	<script src="./js/directive/jmtsplot.js"></script>
-	<script src="./js/directive/jmbarplot.js"></script>
-	<script src="./js/directive/jmtableaggregate.js"></script>
-	<script src="./js/directive/jmtableraw.js"></script>
-	<script src="./js/directive/jmthrputplot.js"></script>
-	<script src="./js/directive/jmexplorejtl.js"></script>
 	<script src="./js/myApp.js"></script>
-
 	<script src="./js/module.js"></script>
 	<script src="./js/states.js"></script>
 	<script src="./bower_components/d3-tip/index.js"></script>
-
-	<style>
-
-	body {
-	  font: 10px sans-serif;
-	}
-
-	.axis path,
-	.axis line {
-	  fill: none;
-	  stroke: #000;
-	  shape-rendering: crispEdges;
-	}
-
-	.x.axis path {
-	  display: none;
-	}
-
-	.line {
-	  fill: none;
-	  stroke: steelblue;
-	  stroke-width: 1.5px;
-	}
-
-	div.tooltip {   
-	  position: absolute;           
-	  text-align: left;           
-	  width: 300px;                  
-	  height: 28px;                 
-	  padding: 2px;             
-	  font: 14px sans-serif;        
-	  border: 0px;      
-	  border-radius: 8px;           
-	  pointer-events: none;         
-	}
-
-	</style>
 
 	<!-- load css -->
 	<link rel="stylesheet" type="text/css" href="./css/myCSS.css">
@@ -73,14 +27,21 @@
 					<li ng-class="{ active: $state.includes('tsplots') }"><a  ui-sref="tsplots">Time Series Plot</a></li>
 					<li ng-class="{ active: $state.includes('tables') }"><a  ui-sref="tables">Aggregate Table</a></li>
 					<li ng-class="{ active: $state.includes('tableraw') }"><a  ui-sref="tableraw">All Trans Table</a></li>
-					<li ng-class="{ active: $state.includes('explorejtl') }"><a  ui-sref="explorejtl">Explore JTL</a></li>
-					<li ng-class="{ active: $state.includes('thrplots') }"><a  ui-sref="thrplots">Throughput Plots</a></li>
-
 				</ul>
 			</div>
 		</div>
 	</div>
 	
 	<div ui-view style="margin-top:80px"></div>
-	
+
+	<div> 
+		<pre>
+			$stateParams = {{ $stateParams }}
+			$state = {{ $state }}
+			$state.includes('home') = {{ $state.includes('home') }}
+			$state.includes('barplots') = {{ $state.includes('barplots') }}
+			$state.includes('tsplots') = {{ $state.includes('tsplots') }}
+		</pre>
+	</div>
+
 </body>
