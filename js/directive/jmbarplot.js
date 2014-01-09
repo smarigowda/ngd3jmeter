@@ -101,7 +101,7 @@ myApp
 						console.log('htmlinput');
 						console.log(htmlinput[0][0]); // the HTML text
 						scope.$watch('ctrl_filter_input.elapsedTime', function() {
-								console.log('scope.ctrl_filter_input.elapsedTime = ' + scope.ctrl_filter_input.elapsedTime);
+								// console.log('scope.ctrl_filter_input.elapsedTime = ' + scope.ctrl_filter_input.elapsedTime);
 						});
 
 
