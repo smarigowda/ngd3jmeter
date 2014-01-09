@@ -108,7 +108,7 @@ myApp
 						.enter().append("svg:circle")
 						.attr("cy", function (d) { return y(d.values.throughput); } )
 						.attr("cx", function (d) { return x(d.key); } )
-						.attr("r", 2)
+						.attr("r", 4)
 						.on("mouseover", function(d, i) {
 							// console.log(d3.mouse(this));
 							// console.log(d3.event);
