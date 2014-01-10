@@ -1,6 +1,6 @@
 How to use?
 
-0. Firk the repository
+0. Fork the repository
 
 1. Clone the forked repository
 
