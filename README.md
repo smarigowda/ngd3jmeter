@@ -8,7 +8,7 @@ How to use?
 
 3. Now open a web browser and type the URL http://localhost:9988/ you should see the main web page having a navigation bar
 
-4. You can change the data in the data directory and update the html file ngJMeter_tsplot.html to plot time series using your data
+4. You can change the data in the data directory and update the template files under the template directory in order to use your data for the various plots.
 
 5. Hovering the mouse on the transaction point will display the elapsed time and transaction name
 
