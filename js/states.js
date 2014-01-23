@@ -32,5 +32,18 @@ angular.module('uiJMRouter')
 			.state("thrplots", {
 				url: "/thrplots",
 				templateUrl: '/template/jmthrplot_template.html'
+			})
+			.state("tsplot_bcsep2013", {
+				url: "/tsplot_bcsep2013",
+				templateUrl: '/template/jmtsplot_bcsep2013_template.html'
+			})
+			.state("tsplot_bcjan2014mergdb", {
+				url: "/tsplot_bcjan2014mergdb",
+				templateUrl: '/template/jmtsplot_bcjan2014mergdb_template.html'
+			})
+			.state("tsplot_imljan2014", {
+				url: "/tsplot_imljan2014",
+				templateUrl: '/template/jmtsplot_imljan2014_template.html'
 			});
+
     }]);

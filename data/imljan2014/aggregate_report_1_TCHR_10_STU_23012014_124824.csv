@@ -1,0 +1,422 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,bytes,grpThreads,allThreads,Latency,SampleCount,ErrorCount,IdleTime
+1390481313620,2,TEACHER ID : 100050,200,OK,1.     INSTRUCTOR-REGISTRATION 1-1,text,true,1472,1,1,0,1,0,0
+1390481313638,0,INSTRUCTOR = 100050,200,OK,1.     INSTRUCTOR-REGISTRATION 1-1,text,true,1470,1,1,0,1,0,0
+1390481313641,2081,S01_INSTRUCTORREGISTRATIONCLASSCREATION_T01_HOME,200,"Number of samples in transaction : 3, number of failing samples : 0",1.     INSTRUCTOR-REGISTRATION 1-1,,true,25736,1,1,0,1,0,2677
+1390481318423,1182,S01_INSTRUCTORREGISTRATIONCLASSCREATION_T02_ACCESSCODE-NEXT,200,"Number of samples in transaction : 2, number of failing samples : 0",1.     INSTRUCTOR-REGISTRATION 1-1,,true,19875,1,1,0,1,0,1277
+1390481320885,255,S01_INSTRUCTORREGISTRATIONCLASSCREATION_T03_CREATE,200,"Number of samples in transaction : 1, number of failing samples : 0",1.     INSTRUCTOR-REGISTRATION 1-1,,true,76964,1,1,0,1,0,1708
+1390481322852,180,S01_INSTRUCTORREGISTRATIONCLASSCREATION_T04_LICENSEAGREE-NEXT,200,"Number of samples in transaction : 1, number of failing samples : 0",1.     INSTRUCTOR-REGISTRATION 1-1,,true,15634,1,1,0,1,0,1432
+1390481324466,83,S01_INSTRUCTORREGISTRATIONCLASSCREATION_T05_INSTRINFO-NEXTT,200,"Number of samples in transaction : 1, number of failing samples : 0",1.     INSTRUCTOR-REGISTRATION 1-1,,true,538,1,1,0,1,0,132
+1390481324682,1719,S01_INSTRUCTORREGISTRATIONCLASSCREATION_T06_OK,200,"Number of samples in transaction : 4, number of failing samples : 0",1.     INSTRUCTOR-REGISTRATION 1-1,,true,19666,1,1,0,1,0,1
+1390481326404,2073,S01_INSTRUCTORREGISTRATIONCLASSCREATION_T07_FINISH,200,"Number of samples in transaction : 4, number of failing samples : 0",1.     INSTRUCTOR-REGISTRATION 1-1,,true,21419,1,1,0,1,0,2610
+1390481331092,662,S01_INSTRUCTORREGISTRATIONCLASSCREATION_T08_LOGOUT,200,"Number of samples in transaction : 1, number of failing samples : 0",1.     INSTRUCTOR-REGISTRATION 1-1,,true,5069,1,1,0,1,0,78
+1390481331871,0,TEACHER ID : 100050,200,OK,2.     INSTRUCTOR-CREATES-A-CLASS 2-1,text,true,1472,1,1,0,1,0,0
+1390481331882,4060,S01_1_ST01_Login,200,"Number of samples in transaction : 5, number of failing samples : 0",2.     INSTRUCTOR-CREATES-A-CLASS 2-1,,true,48288,1,1,0,1,0,25
+1390481335989,993,S01_1_ST02_SelectLanguage_And_Continue,200,"Number of samples in transaction : 1, number of failing samples : 0",2.     INSTRUCTOR-CREATES-A-CLASS 2-1,,true,4012,1,1,0,1,0,1700
+1390481338686,59,S01_1_ST03_ISBN_Search,200,"Number of samples in transaction : 1, number of failing samples : 0",2.     INSTRUCTOR-CREATES-A-CLASS 2-1,,true,3322,1,1,0,1,0,0
+1390481338750,77,S01_1_ST04_Click_On_Book,200,"Number of samples in transaction : 1, number of failing samples : 0",2.     INSTRUCTOR-CREATES-A-CLASS 2-1,,true,3102,1,1,0,1,0,7853
+1390481346684,89,S01_1_ST05_Name_And_Create_Class,200,"Number of samples in transaction : 1, number of failing samples : 0",2.     INSTRUCTOR-CREATES-A-CLASS 2-1,,true,7017,1,1,0,1,0,9769
+1390481356547,487,S01_1_ST06_Click_On_GoTo_MyClasses,200,"Number of samples in transaction : 4, number of failing samples : 0",2.     INSTRUCTOR-CREATES-A-CLASS 2-1,,true,16083,1,1,0,1,0,1933
+1390481358973,449,S01_1_ST07_Refresh_GoTo_MyClasses,200,"Number of samples in transaction : 2, number of failing samples : 0",2.     INSTRUCTOR-CREATES-A-CLASS 2-1,,true,16024,1,1,0,1,0,8855
+1390481368283,273,S01_1_ST08_Refresh_Class_Created,200,"Number of samples in transaction : 3, number of failing samples : 0",2.     INSTRUCTOR-CREATES-A-CLASS 2-1,,true,25206,1,1,0,1,0,7
+1390481368569,185872,S01_1_ST09_Wait_UNTIL_Class_Creation_Is_Complete,200,"Number of samples in transaction : 33, number of failing samples : 0",2.     INSTRUCTOR-CREATES-A-CLASS 2-1,,true,745623,1,1,0,1,0,0
+1390481554531,614,S01_1_ST10_Click_ClassName,200,"Number of samples in transaction : 4, number of failing samples : 0",2.     INSTRUCTOR-CREATES-A-CLASS 2-1,,true,27332,1,1,0,1,0,4892
+1390481560044,2626,S01_1_ST11_Click_Assignments,200,"Number of samples in transaction : 2, number of failing samples : 0",2.     INSTRUCTOR-CREATES-A-CLASS 2-1,,true,18154,1,1,0,1,0,7835
+1390481570510,353,S01_1_ST12_Click_Add_Link,200,"Number of samples in transaction : 2, number of failing samples : 0",2.     INSTRUCTOR-CREATES-A-CLASS 2-1,,true,22453,1,1,0,1,0,4645
+1390481575514,3640,S01_1_ST13_Click_Post,200,"Number of samples in transaction : 3, number of failing samples : 0",2.     INSTRUCTOR-CREATES-A-CLASS 2-1,,true,15022,1,1,0,1,0,4975
+1390481584141,387,S01_1_ST14_Logout,200,"Number of samples in transaction : 2, number of failing samples : 0",2.     INSTRUCTOR-CREATES-A-CLASS 2-1,,true,9466,1,1,0,1,0,2
+1390481584542,1,STUDENT ID : 100050,200,OK,3.     STUDENT-REGISTRATION 3-1,text,true,1468,1,1,0,1,0,0
+1390481584551,0,STUDENT = 100050,200,OK,3.     STUDENT-REGISTRATION 3-1,text,true,1469,1,1,0,1,0,0
+1390481584558,748,S02_STUDENTREGISTRATIONANDTAKESTEST_T01_HOME,200,"Number of samples in transaction : 3, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-1,,true,24557,1,1,0,1,0,2084
+1390481587544,0,STUDENT ID : 100051,200,OK,3.     STUDENT-REGISTRATION 3-2,text,true,1469,2,2,0,1,0,0
+1390481587551,0,STUDENT = 100051,200,OK,3.     STUDENT-REGISTRATION 3-2,text,true,1469,2,2,0,1,0,0
+1390481587396,1386,S02_STUDENTREGISTRATIONANDTAKESTEST_T02_ACCESSCODE-NEXT,200,"Number of samples in transaction : 4, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-1,,true,19873,2,2,0,1,0,3
+1390481587558,385,S02_STUDENTREGISTRATIONANDTAKESTEST_T01_HOME,200,"Number of samples in transaction : 3, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-2,,true,24560,2,2,0,1,0,2223
+1390481590545,0,STUDENT ID : 100052,200,OK,3.     STUDENT-REGISTRATION 3-3,text,true,1469,3,3,0,1,0,0
+1390481590553,0,STUDENT = 100052,200,OK,3.     STUDENT-REGISTRATION 3-3,text,true,1469,3,3,0,1,0,0
+1390481588792,241,S02_STUDENTREGISTRATIONANDTAKESTEST_T03_CREATE,200,"Number of samples in transaction : 1, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-1,,true,77117,3,3,0,1,0,1758
+1390481590174,1103,S02_STUDENTREGISTRATIONANDTAKESTEST_T02_ACCESSCODE-NEXT,200,"Number of samples in transaction : 4, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-2,,true,19872,3,3,0,1,0,2
+1390481590560,448,S02_STUDENTREGISTRATIONANDTAKESTEST_T01_HOME,200,"Number of samples in transaction : 3, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-3,,true,24567,3,3,0,1,0,1858
+1390481591287,243,S02_STUDENTREGISTRATIONANDTAKESTEST_T03_CREATE,200,"Number of samples in transaction : 1, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-2,,true,77117,3,3,0,1,0,1652
+1390481590799,167,S02_STUDENTREGISTRATIONANDTAKESTEST_T04_LICENCEAGREE-NEXT,200,"Number of samples in transaction : 1, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-1,,true,15787,3,3,0,1,0,2550
+1390481593547,0,STUDENT ID : 100053,200,OK,3.     STUDENT-REGISTRATION 3-4,text,true,1469,4,4,0,1,0,0
+1390481593555,0,STUDENT = 100053,200,OK,3.     STUDENT-REGISTRATION 3-4,text,true,1469,4,4,0,1,0,0
+1390481593523,83,S02_STUDENTREGISTRATIONANDTAKESTEST_T05_STUDENTDATA-NEXT,200,"Number of samples in transaction : 1, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-1,,true,538,4,4,0,1,0,2
+1390481592875,981,S02_STUDENTREGISTRATIONANDTAKESTEST_T02_ACCESSCODE-NEXT,200,"Number of samples in transaction : 4, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-3,,true,19878,4,4,0,1,0,1
+1390481593190,163,S02_STUDENTREGISTRATIONANDTAKESTEST_T04_LICENCEAGREE-NEXT,200,"Number of samples in transaction : 1, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-2,,true,15787,4,4,0,1,0,2547
+1390481595908,83,S02_STUDENTREGISTRATIONANDTAKESTEST_T05_STUDENTDATA-NEXT,200,"Number of samples in transaction : 1, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-2,,true,538,4,4,0,1,0,2
+1390481593865,253,S02_STUDENTREGISTRATIONANDTAKESTEST_T03_CREATE,200,"Number of samples in transaction : 1, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-3,,true,77117,4,4,0,1,0,2231
+1390481596549,0,STUDENT ID : 100054,200,OK,3.     STUDENT-REGISTRATION 3-5,text,true,1469,5,5,0,1,0,0
+1390481596560,0,STUDENT = 100054,200,OK,3.     STUDENT-REGISTRATION 3-5,text,true,1469,5,5,0,1,0,0
+1390481593563,384,S02_STUDENTREGISTRATIONANDTAKESTEST_T01_HOME,200,"Number of samples in transaction : 3, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-4,,true,24548,5,5,0,1,0,2651
+1390481596617,1011,S02_STUDENTREGISTRATIONANDTAKESTEST_T02_ACCESSCODE-NEXT,200,"Number of samples in transaction : 4, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-4,,true,19865,5,5,0,1,0,1
+1390481596571,370,S02_STUDENTREGISTRATIONANDTAKESTEST_T01_HOME,200,"Number of samples in transaction : 3, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-5,,true,24548,5,5,0,1,0,1513
+1390481596360,180,S02_STUDENTREGISTRATIONANDTAKESTEST_T04_LICENCEAGREE-NEXT,200,"Number of samples in transaction : 1, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-3,,true,15787,5,5,0,1,0,2600
+1390481599150,83,S02_STUDENTREGISTRATIONANDTAKESTEST_T05_STUDENTDATA-NEXT,200,"Number of samples in transaction : 1, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-3,,true,538,5,5,0,1,0,2
+1390481598466,996,S02_STUDENTREGISTRATIONANDTAKESTEST_T02_ACCESSCODE-NEXT,200,"Number of samples in transaction : 4, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-5,,true,19865,5,5,0,1,0,2
+1390481599551,1,STUDENT ID : 100055,200,OK,3.     STUDENT-REGISTRATION 3-6,text,true,1469,6,6,0,1,0,0
+1390481599562,0,STUDENT = 100055,200,OK,3.     STUDENT-REGISTRATION 3-6,text,true,1468,6,6,0,1,0,0
+1390481597639,241,S02_STUDENTREGISTRATIONANDTAKESTEST_T03_CREATE,200,"Number of samples in transaction : 1, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-4,,true,77117,6,6,0,1,0,2651
+1390481599575,396,S02_STUDENTREGISTRATIONANDTAKESTEST_T01_HOME,200,"Number of samples in transaction : 3, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-6,,true,24560,6,6,0,1,0,2305
+1390481600541,334,S02_STUDENTREGISTRATIONANDTAKESTEST_T04_LICENCEAGREE-NEXT,200,"Number of samples in transaction : 1, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-4,,true,15787,6,6,0,1,0,1658
+1390481602553,1,STUDENT ID : 100056,200,OK,3.     STUDENT-REGISTRATION 3-7,text,true,1469,7,7,0,1,0,0
+1390481602564,0,STUDENT = 100056,200,OK,3.     STUDENT-REGISTRATION 3-7,text,true,1469,7,7,0,1,0,0
+1390481602543,83,S02_STUDENTREGISTRATIONANDTAKESTEST_T05_STUDENTDATA-NEXT,200,"Number of samples in transaction : 1, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-4,,true,538,7,7,0,1,0,2
+1390481599474,493,S02_STUDENTREGISTRATIONANDTAKESTEST_T03_CREATE,200,"Number of samples in transaction : 1, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-5,,true,77117,7,7,0,1,0,2853
+1390481602286,1028,S02_STUDENTREGISTRATIONANDTAKESTEST_T02_ACCESSCODE-NEXT,200,"Number of samples in transaction : 4, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-6,,true,19871,7,7,0,1,0,2
+1390481602574,602,S02_STUDENTREGISTRATIONANDTAKESTEST_T01_HOME,200,"Number of samples in transaction : 3, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-7,,true,24563,7,7,0,1,0,1159
+1390481602833,172,S02_STUDENTREGISTRATIONANDTAKESTEST_T04_LICENCEAGREE-NEXT,200,"Number of samples in transaction : 1, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-5,,true,15787,7,7,0,1,0,1351
+1390481604365,85,S02_STUDENTREGISTRATIONANDTAKESTEST_T05_STUDENTDATA-NEXT,200,"Number of samples in transaction : 1, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-5,,true,538,7,7,0,1,0,2
+1390481599245,2455,S02_STUDENTREGISTRATIONANDTAKESTEST_T06_OK,200,"Number of samples in transaction : 5, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-3,,true,24071,7,7,0,1,0,2937
+1390481596003,1881,S02_STUDENTREGISTRATIONANDTAKESTEST_T06_OK,200,"Number of samples in transaction : 5, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-2,,true,24058,7,7,0,1,0,7094
+1390481603327,246,S02_STUDENTREGISTRATIONANDTAKESTEST_T03_CREATE,200,"Number of samples in transaction : 1, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-6,,true,77117,7,7,0,1,0,1471
+1390481593617,1953,S02_STUDENTREGISTRATIONANDTAKESTEST_T06_OK,200,"Number of samples in transaction : 5, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-1,,true,24063,7,7,0,1,0,9668
+1390481604345,938,S02_STUDENTREGISTRATIONANDTAKESTEST_T02_ACCESSCODE-NEXT,200,"Number of samples in transaction : 4, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-7,,true,19872,7,7,0,1,0,1
+1390481605555,0,STUDENT ID : 100057,200,OK,3.     STUDENT-REGISTRATION 3-8,text,true,1469,8,8,0,1,0,0
+1390481605565,0,STUDENT = 100057,200,OK,3.     STUDENT-REGISTRATION 3-8,text,true,1468,8,8,0,1,0,0
+1390481605296,246,S02_STUDENTREGISTRATIONANDTAKESTEST_T03_CREATE,200,"Number of samples in transaction : 1, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-7,,true,77117,8,8,0,1,0,1279
+1390481605054,94,S02_STUDENTREGISTRATIONANDTAKESTEST_T04_LICENCEAGREE-NEXT,200,"Number of samples in transaction : 1, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-6,,true,15787,8,8,0,1,0,1903
+1390481607063,82,S02_STUDENTREGISTRATIONANDTAKESTEST_T05_STUDENTDATA-NEXT,200,"Number of samples in transaction : 1, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-6,,true,538,8,8,0,1,0,3
+1390481605575,383,S02_STUDENTREGISTRATIONANDTAKESTEST_T01_HOME,200,"Number of samples in transaction : 3, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-8,,true,24567,8,8,0,1,0,2176
+1390481608557,0,STUDENT ID : 100058,200,OK,3.     STUDENT-REGISTRATION 3-9,text,true,1469,9,9,0,1,0,0
+1390481606832,169,S02_STUDENTREGISTRATIONANDTAKESTEST_T04_LICENCEAGREE-NEXT,200,"Number of samples in transaction : 1, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-7,,true,15787,9,9,0,1,0,1569
+1390481608576,1,STUDENT = 100058,200,OK,3.     STUDENT-REGISTRATION 3-9,text,true,1469,9,9,0,1,0,0
+1390481608590,82,S02_STUDENTREGISTRATIONANDTAKESTEST_T05_STUDENTDATA-NEXT,200,"Number of samples in transaction : 1, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-7,,true,538,9,9,0,1,0,5
+1390481608144,1070,S02_STUDENTREGISTRATIONANDTAKESTEST_T02_ACCESSCODE-NEXT,200,"Number of samples in transaction : 4, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-8,,true,19871,9,9,0,1,0,2
+1390481608603,303,S02_STUDENTREGISTRATIONANDTAKESTEST_T01_HOME,200,"Number of samples in transaction : 3, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-9,,true,24555,9,9,0,1,0,1473
+1390481604648,1858,S02_STUDENTREGISTRATIONANDTAKESTEST_T07_FINISH,200,"Number of samples in transaction : 4, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-3,,true,21584,9,9,0,1,0,3902
+1390481609235,282,S02_STUDENTREGISTRATIONANDTAKESTEST_T03_CREATE,200,"Number of samples in transaction : 1, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-8,,true,77117,9,9,0,1,0,1107
+1390481610419,919,S02_STUDENTREGISTRATION_T08_LOGOUT,200,"Number of samples in transaction : 1, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-3,,true,5068,9,9,0,1,0,8
+1390481610390,1102,S02_STUDENTREGISTRATIONANDTAKESTEST_T02_ACCESSCODE-NEXT,200,"Number of samples in transaction : 4, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-9,,true,19878,8,8,0,1,0,1
+1390481611557,0,STUDENT ID : 100059,200,OK,3.     STUDENT-REGISTRATION 3-10,text,true,1468,9,9,0,1,0,0
+1390481611568,0,STUDENT = 100059,200,OK,3.     STUDENT-REGISTRATION 3-10,text,true,1469,9,9,0,1,0,0
+1390481604462,1958,S02_STUDENTREGISTRATIONANDTAKESTEST_T06_OK,200,"Number of samples in transaction : 5, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-5,,true,24070,9,9,0,1,0,6347
+1390481611577,389,S02_STUDENTREGISTRATIONANDTAKESTEST_T01_HOME,200,"Number of samples in transaction : 3, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-10,,true,24554,9,9,0,1,0,1339
+1390481602637,2476,S02_STUDENTREGISTRATIONANDTAKESTEST_T06_OK,200,"Number of samples in transaction : 5, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-4,,true,24057,9,9,0,1,0,8421
+1390481610634,308,S02_STUDENTREGISTRATIONANDTAKESTEST_T04_LICENCEAGREE-NEXT,200,"Number of samples in transaction : 1, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-8,,true,15787,9,9,0,1,0,2635
+1390481613589,80,S02_STUDENTREGISTRATIONANDTAKESTEST_T05_STUDENTDATA-NEXT,200,"Number of samples in transaction : 1, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-8,,true,538,9,9,0,1,0,3
+1390481611502,319,S02_STUDENTREGISTRATIONANDTAKESTEST_T03_CREATE,200,"Number of samples in transaction : 1, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-9,,true,77117,9,9,0,1,0,2361
+1390481613316,1330,S02_STUDENTREGISTRATIONANDTAKESTEST_T02_ACCESSCODE-NEXT,200,"Number of samples in transaction : 4, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-10,,true,19885,9,9,0,1,0,2
+1390481605247,1908,S02_STUDENTREGISTRATIONANDTAKESTEST_T07_FINISH,200,"Number of samples in transaction : 4, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-1,,true,21592,9,9,0,1,0,7953
+1390481604988,2104,S02_STUDENTREGISTRATIONANDTAKESTEST_T07_FINISH,200,"Number of samples in transaction : 4, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-2,,true,21598,9,9,0,1,0,8439
+1390481615117,607,S02_STUDENTREGISTRATION_T08_LOGOUT,200,"Number of samples in transaction : 1, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-1,,true,5068,9,9,0,1,0,8
+1390481615542,883,S02_STUDENTREGISTRATION_T08_LOGOUT,200,"Number of samples in transaction : 1, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-2,,true,5068,8,8,0,1,0,6
+1390481614191,261,S02_STUDENTREGISTRATIONANDTAKESTEST_T04_LICENCEAGREE-NEXT,200,"Number of samples in transaction : 1, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-9,,true,15787,8,8,0,1,0,1988
+1390481607158,2354,S02_STUDENTREGISTRATIONANDTAKESTEST_T06_OK,200,"Number of samples in transaction : 5, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-6,,true,24064,7,7,0,1,0,7015
+1390481616451,87,S02_STUDENTREGISTRATIONANDTAKESTEST_T05_STUDENTDATA-NEXT,200,"Number of samples in transaction : 1, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-9,,true,538,7,7,0,1,0,3
+1390481614657,251,S02_STUDENTREGISTRATIONANDTAKESTEST_T03_CREATE,200,"Number of samples in transaction : 1, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-10,,true,77117,7,7,0,1,0,1898
+1390481613544,2011,S02_STUDENTREGISTRATIONANDTAKESTEST_T07_FINISH,200,"Number of samples in transaction : 4, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-4,,true,21584,7,7,0,1,0,3163
+1390481608687,1959,S02_STUDENTREGISTRATIONANDTAKESTEST_T06_OK,200,"Number of samples in transaction : 5, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-7,,true,24077,7,7,0,1,0,8205
+1390481618742,542,S02_STUDENTREGISTRATION_T08_LOGOUT,200,"Number of samples in transaction : 1, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-4,,true,5069,7,7,0,1,0,11
+1390481613684,1976,S02_STUDENTREGISTRATIONANDTAKESTEST_T06_OK,200,"Number of samples in transaction : 5, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-8,,true,24070,6,6,0,1,0,3782
+1390481616815,174,S02_STUDENTREGISTRATIONANDTAKESTEST_T04_LICENCEAGREE-NEXT,200,"Number of samples in transaction : 1, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-10,,true,15787,6,6,0,1,0,2991
+1390481620011,86,S02_STUDENTREGISTRATIONANDTAKESTEST_T05_STUDENTDATA-NEXT,200,"Number of samples in transaction : 1, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-10,,true,538,6,6,0,1,0,4
+1390481612778,2057,S02_STUDENTREGISTRATIONANDTAKESTEST_T07_FINISH,200,"Number of samples in transaction : 4, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-5,,true,21590,6,6,0,1,0,6689
+1390481621533,837,S02_STUDENTREGISTRATION_T08_LOGOUT,200,"Number of samples in transaction : 1, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-5,,true,5068,6,6,0,1,0,8
+1390481616549,1934,S02_STUDENTREGISTRATIONANDTAKESTEST_T06_OK,200,"Number of samples in transaction : 5, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-9,,true,24078,5,5,0,1,0,5536
+1390481618868,2015,S02_STUDENTREGISTRATIONANDTAKESTEST_T07_FINISH,200,"Number of samples in transaction : 4, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-7,,true,21590,5,5,0,1,0,3183
+1390481620113,2022,S02_STUDENTREGISTRATIONANDTAKESTEST_T06_OK,200,"Number of samples in transaction : 5, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-10,,true,24057,5,5,0,1,0,2165
+1390481624077,854,S02_STUDENTREGISTRATION_T08_LOGOUT,200,"Number of samples in transaction : 1, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-7,,true,5068,5,5,0,1,0,11
+1390481616537,2198,S02_STUDENTREGISTRATIONANDTAKESTEST_T07_FINISH,200,"Number of samples in transaction : 4, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-6,,true,21594,4,4,0,1,0,7349
+1390481626097,533,S02_STUDENTREGISTRATION_T08_LOGOUT,200,"Number of samples in transaction : 1, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-6,,true,5068,4,4,0,1,0,8
+1390481619454,1938,S02_STUDENTREGISTRATIONANDTAKESTEST_T07_FINISH,200,"Number of samples in transaction : 4, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-8,,true,21584,3,3,0,1,0,5472
+1390481626876,1135,S02_STUDENTREGISTRATION_T08_LOGOUT,200,"Number of samples in transaction : 1, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-8,,true,5068,3,3,0,1,0,8
+1390481624028,1887,S02_STUDENTREGISTRATIONANDTAKESTEST_T07_FINISH,200,"Number of samples in transaction : 4, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-9,,true,21588,2,2,0,1,0,7795
+1390481624310,2197,S02_STUDENTREGISTRATIONANDTAKESTEST_T07_FINISH,200,"Number of samples in transaction : 4, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-10,,true,21587,2,2,0,1,0,8061
+1390481633720,1169,S02_STUDENTREGISTRATION_T08_LOGOUT,200,"Number of samples in transaction : 1, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-9,,true,5069,2,2,0,1,0,8
+1390481634577,609,S02_STUDENTREGISTRATION_T08_LOGOUT,200,"Number of samples in transaction : 1, number of failing samples : 0",3.     STUDENT-REGISTRATION 3-10,,true,5068,1,1,0,1,0,10
+1390481635222,0,STUDENT ID : 100050,200,OK,4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-1,text,true,1494,1,1,0,1,0,0
+1390481635235,0,STUDENT = 100050,200,OK,4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-1,text,true,1493,1,1,0,1,0,0
+1390481638236,0,STUDENT ID : 100051,200,OK,4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-2,text,true,1494,2,2,0,1,0,0
+1390481638246,0,STUDENT = 100051,200,OK,4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-2,text,true,1494,2,2,0,1,0,0
+1390481641248,0,STUDENT ID : 100052,200,OK,4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-3,text,true,1494,3,3,0,1,0,0
+1390481641257,0,STUDENT = 100052,200,OK,4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-3,text,true,1494,3,3,0,1,0,0
+1390481644260,0,STUDENT ID : 100053,200,OK,4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-4,text,true,1493,4,4,0,1,0,0
+1390481644269,0,STUDENT = 100053,200,OK,4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-4,text,true,1494,4,4,0,1,0,0
+1390481635248,6475,S02_1_ST01_Login,200,"Number of samples in transaction : 6, number of failing samples : 0",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-1,,true,50855,4,4,0,1,0,2942
+1390481638255,6370,S02_1_ST01_Login,200,"Number of samples in transaction : 6, number of failing samples : 0",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-2,,true,50799,4,4,0,1,0,1117
+1390481644675,53,S02_1_ST02_SelectClass_And_Continue,200,"Number of samples in transaction : 1, number of failing samples : 0",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-1,,true,2747,4,4,0,1,0,1697
+1390481647291,0,STUDENT ID : 100054,200,OK,4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-5,text,true,1494,5,5,0,1,0,0
+1390481647301,0,STUDENT = 100054,200,OK,4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-5,text,true,1494,5,5,0,1,0,0
+1390481645780,68,S02_1_ST02_SelectClass_And_Continue,200,"Number of samples in transaction : 1, number of failing samples : 0",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-2,,true,2748,5,5,0,1,0,1959
+1390481641265,4141,S02_1_ST01_Login,200,"Number of samples in transaction : 6, number of failing samples : 0",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-3,,true,50854,5,5,0,1,0,2691
+1390481646435,180,S02_1_ST03_Click_JoinYourInstructorClass,200,"Number of samples in transaction : 1, number of failing samples : 0",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-1,,true,2804,5,5,0,1,0,2361
+1390481648108,51,S02_1_ST02_SelectClass_And_Continue,200,"Number of samples in transaction : 1, number of failing samples : 0",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-3,,true,2747,5,5,0,1,0,1573
+1390481644278,4002,S02_1_ST01_Login,200,"Number of samples in transaction : 6, number of failing samples : 0",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-4,,true,50854,5,5,0,1,0,1506
+1390481650303,0,STUDENT ID : 100055,200,OK,4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-6,text,true,1493,6,6,0,1,0,0
+1390481650312,0,STUDENT = 100055,200,OK,4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-6,text,true,1494,6,6,0,1,0,0
+1390481647816,245,S02_1_ST03_Click_JoinYourInstructorClass,200,"Number of samples in transaction : 1, number of failing samples : 0",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-2,,true,2804,6,6,0,1,0,2789
+1390481649797,64,S02_1_ST02_SelectClass_And_Continue,200,"Number of samples in transaction : 1, number of failing samples : 0",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-4,,true,2748,6,6,0,1,0,2151
+1390481649743,271,S02_1_ST03_Click_JoinYourInstructorClass,200,"Number of samples in transaction : 1, number of failing samples : 0",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-3,,true,2804,6,6,0,1,0,2823
+1390481653319,0,STUDENT ID : 100056,200,OK,4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-7,text,true,1494,7,7,0,1,0,0
+1390481653328,0,STUDENT = 100056,200,OK,4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-7,text,true,1494,7,7,0,1,0,0
+1390481647309,3481,S02_1_ST01_Login,200,"Number of samples in transaction : 6, number of failing samples : 0",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-5,,true,50850,7,7,0,1,0,2724
+1390481653524,57,S02_1_ST02_SelectClass_And_Continue,200,"Number of samples in transaction : 1, number of failing samples : 0",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-5,,true,2745,7,7,0,1,0,1097
+1390481652021,358,S02_1_ST03_Click_JoinYourInstructorClass,200,"Number of samples in transaction : 1, number of failing samples : 0",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-4,,true,2805,7,7,0,1,0,2695
+1390481650321,4013,S02_1_ST01_Login,200,"Number of samples in transaction : 6, number of failing samples : 0",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-6,,true,50788,7,7,0,1,0,1868
+1390481656331,1,STUDENT ID : 100057,200,OK,4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-8,text,true,1494,8,8,0,1,0,0
+1390481656340,1,STUDENT = 100057,200,OK,4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-8,text,true,1494,8,8,0,1,0,0
+1390481654686,198,S02_1_ST03_Click_JoinYourInstructorClass,200,"Number of samples in transaction : 1, number of failing samples : 0",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-5,,true,2802,8,8,0,1,0,2936
+1390481656212,72,S02_1_ST02_SelectClass_And_Continue,200,"Number of samples in transaction : 1, number of failing samples : 0",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-6,,true,2746,8,8,0,1,0,1809
+1390481653337,3887,S02_1_ST01_Login,200,"Number of samples in transaction : 6, number of failing samples : 0",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-7,,true,50859,8,8,0,1,0,1204
+1390481659348,1,STUDENT ID : 100058,200,OK,4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-9,text,true,1493,9,9,0,1,0,0
+1390481659358,0,STUDENT = 100058,200,OK,4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-9,text,true,1494,9,9,0,1,0,0
+1390481658439,59,S02_1_ST02_SelectClass_And_Continue,200,"Number of samples in transaction : 1, number of failing samples : 0",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-7,,true,2748,9,9,0,1,0,1411
+1390481658104,361,S02_1_ST03_Click_JoinYourInstructorClass,200,"Number of samples in transaction : 1, number of failing samples : 0",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-6,,true,2803,9,9,0,1,0,1772
+1390481659917,548,S02_1_ST03_Click_JoinYourInstructorClass,200,"Number of samples in transaction : 1, number of failing samples : 0",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-7,,true,2805,9,9,0,1,0,1936
+1390481662403,0,STUDENT ID : 100059,200,OK,4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-10,text,true,1494,10,10,0,1,0,0
+1390481662420,0,STUDENT = 100059,200,OK,4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-10,text,true,1494,10,10,0,1,0,0
+1390481656350,3909,S02_1_ST01_Login,200,"Number of samples in transaction : 6, number of failing samples : 0",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-8,,true,50855,10,10,0,1,0,2500
+1390481659366,3690,S02_1_ST01_Login,200,"Number of samples in transaction : 6, number of failing samples : 0",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-9,,true,50850,10,10,0,1,0,1081
+1390481662769,156,S02_1_ST02_SelectClass_And_Continue,200,"Number of samples in transaction : 1, number of failing samples : 0",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-8,,true,2749,10,10,0,1,0,2000
+1390481664149,55,S02_1_ST02_SelectClass_And_Continue,200,"Number of samples in transaction : 1, number of failing samples : 0",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-9,,true,2746,10,10,0,1,0,1122
+1390481665335,238,S02_1_ST03_Click_JoinYourInstructorClass,200,"Number of samples in transaction : 1, number of failing samples : 0",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-9,,true,2803,10,10,0,1,0,1169
+1390481662431,4267,S02_1_ST01_Login,200,"Number of samples in transaction : 6, number of failing samples : 0",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-10,,true,50854,10,10,0,1,0,1154
+1390481664933,241,S02_1_ST03_Click_JoinYourInstructorClass,200,"Number of samples in transaction : 1, number of failing samples : 0",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-8,,true,2805,10,10,0,1,0,2842
+1390481667862,64,S02_1_ST02_SelectClass_And_Continue,200,"Number of samples in transaction : 1, number of failing samples : 0",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-10,,true,2749,10,10,0,1,0,2027
+1390481669962,303,S02_1_ST03_Click_JoinYourInstructorClass,200,"Number of samples in transaction : 1, number of failing samples : 0",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-10,,true,2805,10,10,0,1,0,1576
+1390481648985,34931,S02_1_ST04_InputClassID_And_Click_Continue,200,"Number of samples in transaction : 1, number of failing samples : 0",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-1,,true,2778,10,10,0,1,0,6942
+1390481666750,15676,S02_1_ST04_InputClassID_And_Click_Continue,200,"Number of samples in transaction : 1, number of failing samples : 0",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-9,,true,2775,10,10,0,1,0,8437
+1390481657828,24233,S02_1_ST04_InputClassID_And_Click_Continue,200,"Number of samples in transaction : 1, number of failing samples : 0",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-5,,true,2775,10,10,0,1,0,8804
+1390481652846,35632,S02_1_ST04_InputClassID_And_Click_Continue,200,"Number of samples in transaction : 1, number of failing samples : 0",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-3,,true,2775,10,10,0,1,0,2385
+1390481662410,19006,S02_1_ST04_InputClassID_And_Click_Continue,200,"Number of samples in transaction : 1, number of failing samples : 0",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-7,,true,2778,10,10,0,1,0,9451
+1390481655083,40171,S02_1_ST04_InputClassID_And_Click_Continue,200,"Number of samples in transaction : 1, number of failing samples : 0",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-4,,true,2776,10,10,0,1,0,4140
+1390481671850,23553,S02_1_ST04_InputClassID_And_Click_Continue,200,"Number of samples in transaction : 1, number of failing samples : 0",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-10,,true,2778,10,10,0,1,0,3997
+1390481668024,29067,S02_1_ST04_InputClassID_And_Click_Continue,200,"Number of samples in transaction : 1, number of failing samples : 0",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-8,,true,2777,10,10,0,1,0,2317
+1390481650858,45823,S02_1_ST04_InputClassID_And_Click_Continue,200,"Number of samples in transaction : 1, number of failing samples : 0",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-2,,true,2776,10,10,0,1,0,2722
+1390481660246,34944,S02_1_ST04_InputClassID_And_Click_Continue,200,"Number of samples in transaction : 1, number of failing samples : 0",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-6,,true,2775,10,10,0,1,0,4216
+1390481690883,34296,S02_1_ST05_Click_JoinButton,,"Number of samples in transaction : 4, number of failing samples : 1",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-5,,false,55931,10,10,0,1,1,1
+1390481690883,34325,S02_1_ST05_Click_JoinButton,,"Number of samples in transaction : 4, number of failing samples : 1",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-3,,false,55988,9,9,0,1,1,4
+1390481690883,34342,S02_1_ST05_Click_JoinButton,,"Number of samples in transaction : 4, number of failing samples : 1",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-9,,false,55927,8,8,0,1,1,2
+1390481690884,34350,S02_1_ST05_Click_JoinButton,,"Number of samples in transaction : 4, number of failing samples : 1",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-7,,false,55938,8,8,0,1,1,1
+1390481690867,32704,S02_1_ST05_Click_JoinButton,200,"Number of samples in transaction : 7, number of failing samples : 0",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-1,,true,92138,6,6,0,1,0,2780
+1390481726360,1588,S02_1_ST06_Click_Assignments,200,"Number of samples in transaction : 3, number of failing samples : 0",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-1,,true,21964,6,6,0,1,0,1708
+1390481729666,376,S02_1_ST07_Click_Assignment_Link,200,"Number of samples in transaction : 2, number of failing samples : 0",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-1,,true,13273,6,6,0,1,0,1659
+1390481699420,36282,S02_1_ST05_Click_JoinButton,,"Number of samples in transaction : 4, number of failing samples : 1",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-2,,false,55989,6,6,0,1,1,3
+1390481699420,36311,S02_1_ST05_Click_JoinButton,,"Number of samples in transaction : 4, number of failing samples : 1",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-8,,false,55989,5,5,0,1,1,2
+1390481699421,36313,S02_1_ST05_Click_JoinButton,,"Number of samples in transaction : 4, number of failing samples : 1",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-6,,false,55973,5,5,0,1,1,2
+1390481699402,35131,S02_1_ST05_Click_JoinButton,200,"Number of samples in transaction : 7, number of failing samples : 0",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-4,,true,92142,3,3,0,1,0,1228
+1390481699411,35186,S02_1_ST05_Click_JoinButton,200,"Number of samples in transaction : 7, number of failing samples : 0",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-10,,true,92164,3,3,0,1,0,3381
+1390481735774,1741,S02_1_ST06_Click_Assignments,200,"Number of samples in transaction : 3, number of failing samples : 0",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-4,,true,22059,3,3,0,1,0,3849
+1390481737988,1735,S02_1_ST06_Click_Assignments,200,"Number of samples in transaction : 3, number of failing samples : 0",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-10,,true,21937,3,3,0,1,0,3592
+1390481741373,425,S02_1_ST07_Click_Assignment_Link,200,"Number of samples in transaction : 2, number of failing samples : 0",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-4,,true,13274,3,3,0,1,0,1663
+1390481731710,924,S02_1_ST08_Click_Submitt,200,"Number of samples in transaction : 2, number of failing samples : 0",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-1,,true,5899,3,3,0,1,0,11631
+1390481743324,404,S02_1_ST07_Click_Assignment_Link,200,"Number of samples in transaction : 2, number of failing samples : 0",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-10,,true,13274,3,3,0,1,0,1739
+1390481743471,910,S02_1_ST08_Click_Submitt,200,"Number of samples in transaction : 2, number of failing samples : 0",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-4,,true,5893,3,3,0,1,0,6303
+1390481744274,1845,S02_1_ST09_Click_BackToList,200,"Number of samples in transaction : 2, number of failing samples : 0",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-1,,true,9061,3,3,0,1,0,5509
+1390481751636,334,S02_1_ST10_Logout,200,"Number of samples in transaction : 2, number of failing samples : 0",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-1,,true,9466,3,3,0,1,0,1458
+1390481750694,1381,S02_1_ST09_Click_BackToList,200,"Number of samples in transaction : 2, number of failing samples : 0",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-4,,true,8973,2,2,0,1,0,3680
+1390481755764,351,S02_1_ST10_Logout,200,"Number of samples in transaction : 2, number of failing samples : 0",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-4,,true,9466,2,2,0,1,0,1325
+1390481745476,821,S02_1_ST08_Click_Submitt,200,"Number of samples in transaction : 2, number of failing samples : 0",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-10,,true,5899,1,1,0,1,0,17307
+1390481763613,1012,S02_1_ST09_Click_BackToList,200,"Number of samples in transaction : 2, number of failing samples : 0",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-10,,true,9028,1,1,0,1,0,3258
+1390481767892,433,S02_1_ST10_Logout,200,"Number of samples in transaction : 2, number of failing samples : 0",4.     STUDENT-JOINS-CLASS-TAKES-TEST-SUBMITS-ASSIGNMENT 4-10,,true,9466,1,1,0,1,0,1894
+1390481770236,0,TEACHER ID : 100050,200,OK,5.     INSTRUCTOR-GRADES-STUDENTS 5-1,text,true,1472,1,1,0,1,0,0
+1390481770245,4532,S03_1_ST01_Login,200,"Number of samples in transaction : 8, number of failing samples : 0",5.     INSTRUCTOR-GRADES-STUDENTS 5-1,,true,86459,1,1,0,1,0,26
+1390481774814,303,S03_1_ST02_Click_Class_Name,200,"Number of samples in transaction : 2, number of failing samples : 0",5.     INSTRUCTOR-GRADES-STUDENTS 5-1,,true,25254,1,1,0,1,0,2111
+1390481777238,2026,S03_1_ST03_Click_Assignments,200,"Number of samples in transaction : 2, number of failing samples : 0",5.     INSTRUCTOR-GRADES-STUDENTS 5-1,,true,35805,1,1,0,1,0,3942
+1390481783216,1572,S03_1_ST04_Click_View_Submissions,200,"Number of samples in transaction : 3, number of failing samples : 0",5.     INSTRUCTOR-GRADES-STUDENTS 5-1,,true,39322,1,1,0,1,0,5516
+1390481790315,124,S03_1_ST05_Click_Ungraded_Assignment,200,"Number of samples in transaction : 2, number of failing samples : 0",5.     INSTRUCTOR-GRADES-STUDENTS 5-1,,true,5221,1,1,0,1,0,7053
+1390481797501,332,S03_1_ST06_Click_Save_And_Release_To_Student,200,"Number of samples in transaction : 2, number of failing samples : 0",5.     INSTRUCTOR-GRADES-STUDENTS 5-1,,true,10158,1,1,0,1,0,3254
+1390481801099,642,S03_1_ST07_Click_Return_to_List,200,"Number of samples in transaction : 2, number of failing samples : 0",5.     INSTRUCTOR-GRADES-STUDENTS 5-1,,true,13148,1,1,0,1,0,8196
+1390481809945,2673,S03_1_ST08_Click_Assignment_List,200,"Number of samples in transaction : 2, number of failing samples : 0",5.     INSTRUCTOR-GRADES-STUDENTS 5-1,,true,13290,1,1,0,1,0,1920
+1390481814548,1398,S03_1_ST03_Click_Assignments,200,"Number of samples in transaction : 2, number of failing samples : 0",5.     INSTRUCTOR-GRADES-STUDENTS 5-1,,true,47051,1,1,0,1,0,1044
+1390481816999,325,S03_1_ST04_Click_View_Submissions,200,"Number of samples in transaction : 3, number of failing samples : 0",5.     INSTRUCTOR-GRADES-STUDENTS 5-1,,true,41967,1,1,0,1,0,2250
+1390481819587,114,S03_1_ST05_Click_Ungraded_Assignment,200,"Number of samples in transaction : 2, number of failing samples : 0",5.     INSTRUCTOR-GRADES-STUDENTS 5-1,,true,5210,1,1,0,1,0,2583
+1390481822292,321,S03_1_ST06_Click_Save_And_Release_To_Student,200,"Number of samples in transaction : 2, number of failing samples : 0",5.     INSTRUCTOR-GRADES-STUDENTS 5-1,,true,10194,1,1,0,1,0,9778
+1390481832403,441,S03_1_ST07_Click_Return_to_List,200,"Number of samples in transaction : 2, number of failing samples : 0",5.     INSTRUCTOR-GRADES-STUDENTS 5-1,,true,13136,1,1,0,1,0,2777
+1390481835629,3000,S03_1_ST08_Click_Assignment_List,200,"Number of samples in transaction : 2, number of failing samples : 0",5.     INSTRUCTOR-GRADES-STUDENTS 5-1,,true,13301,1,1,0,1,0,5215
+1390481843854,1446,S03_1_ST03_Click_Assignments,200,"Number of samples in transaction : 2, number of failing samples : 0",5.     INSTRUCTOR-GRADES-STUDENTS 5-1,,true,47054,1,1,0,1,0,9131
+1390481854443,301,S03_1_ST04_Click_View_Submissions,200,"Number of samples in transaction : 3, number of failing samples : 0",5.     INSTRUCTOR-GRADES-STUDENTS 5-1,,true,42002,1,1,0,1,0,5013
+1390481859769,126,S03_1_ST05_Click_Ungraded_Assignment,200,"Number of samples in transaction : 2, number of failing samples : 0",5.     INSTRUCTOR-GRADES-STUDENTS 5-1,,true,5234,1,1,0,1,0,8090
+1390481867996,551,S03_1_ST06_Click_Save_And_Release_To_Student,200,"Number of samples in transaction : 2, number of failing samples : 0",5.     INSTRUCTOR-GRADES-STUDENTS 5-1,,true,10181,1,1,0,1,0,6736
+1390481875673,692,S03_1_ST07_Click_Return_to_List,200,"Number of samples in transaction : 2, number of failing samples : 0",5.     INSTRUCTOR-GRADES-STUDENTS 5-1,,true,13111,1,1,0,1,0,6288
+1390481882662,2705,S03_1_ST08_Click_Assignment_List,200,"Number of samples in transaction : 2, number of failing samples : 0",5.     INSTRUCTOR-GRADES-STUDENTS 5-1,,true,13328,1,1,0,1,0,3186
+1390481888565,1460,S03_1_ST03_Click_Assignments,200,"Number of samples in transaction : 2, number of failing samples : 0",5.     INSTRUCTOR-GRADES-STUDENTS 5-1,,true,47033,1,1,0,1,0,8368
+1390481898398,284,S03_1_ST04_Click_View_Submissions,200,"Number of samples in transaction : 3, number of failing samples : 0",5.     INSTRUCTOR-GRADES-STUDENTS 5-1,,true,38402,1,1,0,1,0,3587
+1390481902275,402,S03_1_ST07_Click_Return_to_List,200,"Number of samples in transaction : 2, number of failing samples : 0",5.     INSTRUCTOR-GRADES-STUDENTS 5-1,,true,13370,1,1,0,1,0,2185
+1390481904864,2826,S03_1_ST08_Click_Assignment_List,200,"Number of samples in transaction : 2, number of failing samples : 0",5.     INSTRUCTOR-GRADES-STUDENTS 5-1,,true,13368,1,1,0,1,0,5588
+1390481913284,1495,S03_1_ST03_Click_Assignments,200,"Number of samples in transaction : 2, number of failing samples : 0",5.     INSTRUCTOR-GRADES-STUDENTS 5-1,,true,42351,1,1,0,1,0,8876
+1390481923660,770,S03_1_ST04_Click_View_Submissions,200,"Number of samples in transaction : 3, number of failing samples : 0",5.     INSTRUCTOR-GRADES-STUDENTS 5-1,,true,37247,1,1,0,1,0,5352
+1390481929860,487,S03_1_ST07_Click_Return_to_List,200,"Number of samples in transaction : 2, number of failing samples : 0",5.     INSTRUCTOR-GRADES-STUDENTS 5-1,,true,13440,1,1,0,1,0,1274
+1390481931628,2812,S03_1_ST08_Click_Assignment_List,200,"Number of samples in transaction : 2, number of failing samples : 0",5.     INSTRUCTOR-GRADES-STUDENTS 5-1,,true,13322,1,1,0,1,0,1534
+1390481935982,1546,S03_1_ST03_Click_Assignments,200,"Number of samples in transaction : 2, number of failing samples : 0",5.     INSTRUCTOR-GRADES-STUDENTS 5-1,,true,42440,1,1,0,1,0,3797
+1390481941335,748,S03_1_ST04_Click_View_Submissions,200,"Number of samples in transaction : 3, number of failing samples : 0",5.     INSTRUCTOR-GRADES-STUDENTS 5-1,,true,37246,1,1,0,1,0,2017
+1390481944110,456,S03_1_ST07_Click_Return_to_List,200,"Number of samples in transaction : 2, number of failing samples : 0",5.     INSTRUCTOR-GRADES-STUDENTS 5-1,,true,13437,1,1,0,1,0,2203
+1390481946778,2998,S03_1_ST08_Click_Assignment_List,200,"Number of samples in transaction : 2, number of failing samples : 0",5.     INSTRUCTOR-GRADES-STUDENTS 5-1,,true,13303,1,1,0,1,0,4917
+1390481954703,1931,S03_1_ST03_Click_Assignments,200,"Number of samples in transaction : 2, number of failing samples : 0",5.     INSTRUCTOR-GRADES-STUDENTS 5-1,,true,42366,1,1,0,1,0,8318
+1390481964961,328,S03_1_ST04_Click_View_Submissions,200,"Number of samples in transaction : 3, number of failing samples : 0",5.     INSTRUCTOR-GRADES-STUDENTS 5-1,,true,37214,1,1,0,1,0,1744
+1390481967043,511,S03_1_ST07_Click_Return_to_List,200,"Number of samples in transaction : 2, number of failing samples : 0",5.     INSTRUCTOR-GRADES-STUDENTS 5-1,,true,13433,1,1,0,1,0,5381
+1390481972942,3080,S03_1_ST08_Click_Assignment_List,200,"Number of samples in transaction : 2, number of failing samples : 0",5.     INSTRUCTOR-GRADES-STUDENTS 5-1,,true,13331,1,1,0,1,0,7374
+1390481983747,1627,S03_1_ST03_Click_Assignments,200,"Number of samples in transaction : 2, number of failing samples : 0",5.     INSTRUCTOR-GRADES-STUDENTS 5-1,,true,42353,1,1,0,1,0,9627
+1390481995012,391,S03_1_ST04_Click_View_Submissions,200,"Number of samples in transaction : 3, number of failing samples : 0",5.     INSTRUCTOR-GRADES-STUDENTS 5-1,,true,37210,1,1,0,1,0,7460
+1390482002873,541,S03_1_ST07_Click_Return_to_List,200,"Number of samples in transaction : 2, number of failing samples : 0",5.     INSTRUCTOR-GRADES-STUDENTS 5-1,,true,13433,1,1,0,1,0,7279
+1390482010701,3049,S03_1_ST08_Click_Assignment_List,200,"Number of samples in transaction : 2, number of failing samples : 0",5.     INSTRUCTOR-GRADES-STUDENTS 5-1,,true,13323,1,1,0,1,0,4947
+1390482018704,1497,S03_1_ST03_Click_Assignments,200,"Number of samples in transaction : 2, number of failing samples : 0",5.     INSTRUCTOR-GRADES-STUDENTS 5-1,,true,42348,1,1,0,1,0,5349
+1390482025558,570,S03_1_ST04_Click_View_Submissions,200,"Number of samples in transaction : 3, number of failing samples : 0",5.     INSTRUCTOR-GRADES-STUDENTS 5-1,,true,37215,1,1,0,1,0,8081
+1390482034219,474,S03_1_ST07_Click_Return_to_List,200,"Number of samples in transaction : 2, number of failing samples : 0",5.     INSTRUCTOR-GRADES-STUDENTS 5-1,,true,13433,1,1,0,1,0,5210
+1390482039912,3099,S03_1_ST08_Click_Assignment_List,200,"Number of samples in transaction : 2, number of failing samples : 0",5.     INSTRUCTOR-GRADES-STUDENTS 5-1,,true,13288,1,1,0,1,0,1800
+1390482044821,1606,S03_1_ST03_Click_Assignments,200,"Number of samples in transaction : 2, number of failing samples : 0",5.     INSTRUCTOR-GRADES-STUDENTS 5-1,,true,42286,1,1,0,1,0,8100
+1390482054536,919,S03_1_ST04_Click_View_Submissions,200,"Number of samples in transaction : 3, number of failing samples : 0",5.     INSTRUCTOR-GRADES-STUDENTS 5-1,,true,37210,1,1,0,1,0,7444
+1390482062908,764,S03_1_ST07_Click_Return_to_List,200,"Number of samples in transaction : 2, number of failing samples : 0",5.     INSTRUCTOR-GRADES-STUDENTS 5-1,,true,13473,1,1,0,1,0,8098
+1390482071778,4013,S03_1_ST08_Click_Assignment_List,200,"Number of samples in transaction : 2, number of failing samples : 0",5.     INSTRUCTOR-GRADES-STUDENTS 5-1,,true,13361,1,1,0,1,0,8527
+1390482084325,4363,S03_1_ST09_Click_GradeBook,200,"Number of samples in transaction : 3, number of failing samples : 0",5.     INSTRUCTOR-GRADES-STUDENTS 5-1,,true,133359,1,1,0,1,0,6394
+1390482095094,931,S03_1_ST10_Click_Logout,200,"Number of samples in transaction : 2, number of failing samples : 0",5.     INSTRUCTOR-GRADES-STUDENTS 5-1,,true,9466,1,1,0,1,0,1709
+1390482097747,0,STUJOIN : 100050,200,OK,6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-1,text,true,1469,1,1,0,1,0,0
+1390482097768,0,STUJOIN = 100050,200,OK,6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-1,text,true,1469,1,1,0,1,0,0
+1390482100751,0,STUJOIN : 100051,200,OK,6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-2,text,true,1469,2,2,0,1,0,0
+1390482100759,0,STUJOIN = 100051,200,OK,6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-2,text,true,1469,2,2,0,1,0,0
+1390482097777,1536,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T01_HOME,200,"Number of samples in transaction : 3, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-1,,true,25711,2,2,0,1,0,1965
+1390482101285,754,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T02_ACCESSCODE-NEXT,200,"Number of samples in transaction : 2, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-1,,true,19875,2,2,0,1,0,1425
+1390482103751,1,STUJOIN : 100052,200,OK,6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-3,text,true,1469,3,3,0,1,0,0
+1390482103760,0,STUJOIN = 100052,200,OK,6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-3,text,true,1469,3,3,0,1,0,0
+1390482100766,1163,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T01_HOME,200,"Number of samples in transaction : 3, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-2,,true,25707,3,3,0,1,0,2107
+1390482103471,254,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T03_CREATE,200,"Number of samples in transaction : 1, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-1,,true,76964,3,3,0,1,0,1251
+1390482104043,531,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T02_ACCESSCODE-NEXT,200,"Number of samples in transaction : 2, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-2,,true,19874,3,3,0,1,0,1942
+1390482106754,0,STUJOIN : 100053,200,OK,6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-4,text,true,1469,4,4,0,1,0,0
+1390482106765,0,STUJOIN = 100053,200,OK,6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-4,text,true,1468,4,4,0,1,0,0
+1390482104985,192,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T04_LICENSEAGREE-NEXT,200,"Number of samples in transaction : 1, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-1,,true,15634,4,4,0,1,0,2063
+1390482103766,862,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T01_HOME,200,"Number of samples in transaction : 3, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-3,,true,25701,4,4,0,1,0,2627
+1390482107248,86,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T05_STUDENTINFO-NEXT,200,"Number of samples in transaction : 1, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-1,,true,538,4,4,0,1,0,2
+1390482107343,1538,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T06_OK,200,"Number of samples in transaction : 4, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-1,,true,19196,4,4,0,1,0,0
+1390482109757,0,STUJOIN : 100054,200,OK,6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-5,text,true,1468,5,5,0,1,0,0
+1390482109767,1,STUJOIN = 100054,200,OK,6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-5,text,true,1469,5,5,0,1,0,0
+1390482106525,259,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T03_CREATE,200,"Number of samples in transaction : 1, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-2,,true,76964,5,5,0,1,0,2994
+1390482106772,921,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T01_HOME,200,"Number of samples in transaction : 3, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-4,,true,25707,5,5,0,1,0,2273
+1390482107262,836,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T02_ACCESSCODE-NEXT,200,"Number of samples in transaction : 2, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-3,,true,19874,5,5,0,1,0,2395
+1390482108888,1963,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T07_FINISH,200,"Number of samples in transaction : 4, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-1,,true,21401,5,5,0,1,0,1165
+1390482109978,404,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T02_ACCESSCODE-NEXT,200,"Number of samples in transaction : 2, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-4,,true,19874,5,5,0,1,0,1691
+1390482112032,646,S04_STUDENTREGISTRATION_T08_LOGOUT,200,"Number of samples in transaction : 1, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-1,,true,5069,5,5,0,1,0,7
+1390482109789,179,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T04_LICENSEAGREE-NEXT,200,"Number of samples in transaction : 1, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-2,,true,15634,4,4,0,1,0,2769
+1390482112759,0,STUJOIN : 100055,200,OK,6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-6,text,true,1469,5,5,0,1,0,0
+1390482112768,1,STUJOIN = 100055,200,OK,6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-6,text,true,1469,5,5,0,1,0,0
+1390482112738,88,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T05_STUDENTINFO-NEXT,200,"Number of samples in transaction : 1, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-2,,true,538,5,5,0,1,0,3
+1390482109775,863,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T01_HOME,200,"Number of samples in transaction : 3, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-5,,true,25701,5,5,0,1,0,2327
+1390482110499,485,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T03_CREATE,200,"Number of samples in transaction : 1, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-3,,true,76964,5,5,0,1,0,2450
+1390482112830,1562,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T06_OK,200,"Number of samples in transaction : 4, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-2,,true,19216,5,5,0,1,0,0
+1390482112075,246,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T03_CREATE,200,"Number of samples in transaction : 1, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-4,,true,76964,5,5,0,1,0,2525
+1390482112797,858,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T01_HOME,200,"Number of samples in transaction : 3, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-6,,true,25707,5,5,0,1,0,1523
+1390482112967,422,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T02_ACCESSCODE-NEXT,200,"Number of samples in transaction : 2, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-5,,true,19874,5,5,0,1,0,1956
+1390482115760,0,STUJOIN : 100056,200,OK,6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-7,text,true,1469,6,6,0,1,0,0
+1390482115761,0,STUJOIN = 100056,200,OK,6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-7,text,true,1469,6,6,0,1,0,0
+1390482113436,166,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T04_LICENSEAGREE-NEXT,200,"Number of samples in transaction : 1, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-3,,true,15634,6,6,0,1,0,2708
+1390482116311,80,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T05_STUDENTINFO-NEXT,200,"Number of samples in transaction : 1, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-3,,true,538,6,6,0,1,0,3
+1390482114848,170,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T04_LICENSEAGREE-NEXT,200,"Number of samples in transaction : 1, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-4,,true,15634,6,6,0,1,0,2340
+1390482117359,80,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T05_STUDENTINFO-NEXT,200,"Number of samples in transaction : 1, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-4,,true,538,6,6,0,1,0,4
+1390482115790,820,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T01_HOME,200,"Number of samples in transaction : 3, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-7,,true,25701,6,6,0,1,0,1054
+1390482115180,728,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T02_ACCESSCODE-NEXT,200,"Number of samples in transaction : 2, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-6,,true,19875,6,6,0,1,0,1940
+1390482116395,1629,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T06_OK,200,"Number of samples in transaction : 4, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-3,,true,19190,6,6,0,1,0,1
+1390482115347,483,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T03_CREATE,200,"Number of samples in transaction : 1, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-5,,true,76964,6,6,0,1,0,2315
+1390482118761,0,STUJOIN : 100057,200,OK,6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-8,text,true,1468,7,7,0,1,0,0
+1390482118763,0,STUJOIN = 100057,200,OK,6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-8,text,true,1469,7,7,0,1,0,0
+1390482117444,1689,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T06_OK,200,"Number of samples in transaction : 4, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-4,,true,19216,7,7,0,1,0,1
+1390482117666,492,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T02_ACCESSCODE-NEXT,200,"Number of samples in transaction : 2, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-7,,true,19874,7,7,0,1,0,1495
+1390482118147,169,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T04_LICENSEAGREE-NEXT,200,"Number of samples in transaction : 1, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-5,,true,15634,7,7,0,1,0,1914
+1390482120231,83,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T05_STUDENTINFO-NEXT,200,"Number of samples in transaction : 1, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-5,,true,538,7,7,0,1,0,3
+1390482117850,259,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T03_CREATE,200,"Number of samples in transaction : 1, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-6,,true,76964,7,7,0,1,0,2371
+1390482118027,1931,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T07_FINISH,200,"Number of samples in transaction : 4, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-3,,true,21399,7,7,0,1,0,1077
+1390482121037,602,S04_STUDENTREGISTRATION_T08_LOGOUT,200,"Number of samples in transaction : 1, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-3,,true,5068,7,7,0,1,0,6
+1390482121763,0,STUJOIN : 100058,200,OK,6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-9,text,true,1469,7,7,0,1,0,0
+1390482121765,0,STUJOIN = 100058,200,OK,6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-9,text,true,1469,7,7,0,1,0,0
+1390482120318,1518,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T06_OK,200,"Number of samples in transaction : 4, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-5,,true,19202,7,7,0,1,0,2
+1390482119655,246,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T03_CREATE,200,"Number of samples in transaction : 1, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-7,,true,76964,7,7,0,1,0,2476
+1390482118792,881,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T01_HOME,200,"Number of samples in transaction : 3, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-8,,true,25708,7,7,0,1,0,2779
+1390482120482,91,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T04_LICENSEAGREE-NEXT,200,"Number of samples in transaction : 1, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-6,,true,15634,7,7,0,1,0,2051
+1390482122626,81,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T05_STUDENTINFO-NEXT,200,"Number of samples in transaction : 1, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-6,,true,538,7,7,0,1,0,2
+1390482114420,1942,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T07_FINISH,200,"Number of samples in transaction : 4, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-2,,true,21395,7,7,0,1,0,7424
+1390482122454,416,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T02_ACCESSCODE-NEXT,200,"Number of samples in transaction : 2, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-8,,true,19874,7,7,0,1,0,1437
+1390482122710,1617,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T06_OK,200,"Number of samples in transaction : 4, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-6,,true,19206,7,7,0,1,0,3
+1390482123788,882,S04_STUDENTREGISTRATION_T08_LOGOUT,200,"Number of samples in transaction : 1, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-2,,true,5068,7,7,0,1,0,6
+1390482122385,167,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T04_LICENSEAGREE-NEXT,200,"Number of samples in transaction : 1, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-7,,true,15634,6,6,0,1,0,2139
+1390482124765,0,STUJOIN : 100059,200,OK,6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-10,text,true,1469,7,7,0,1,0,0
+1390482124766,1,STUJOIN = 100059,200,OK,6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-10,text,true,1468,7,7,0,1,0,0
+1390482124706,83,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T05_STUDENTINFO-NEXT,200,"Number of samples in transaction : 1, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-7,,true,538,7,7,0,1,0,2
+1390482121839,2002,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T07_FINISH,200,"Number of samples in transaction : 4, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-5,,true,21401,7,7,0,1,0,1012
+1390482121797,876,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T01_HOME,200,"Number of samples in transaction : 3, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-9,,true,25707,7,7,0,1,0,2569
+1390482124856,888,S04_STUDENTREGISTRATION_T08_LOGOUT,200,"Number of samples in transaction : 1, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-5,,true,5068,7,7,0,1,0,6
+1390482119136,1981,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T07_FINISH,200,"Number of samples in transaction : 4, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-4,,true,21401,6,6,0,1,0,5651
+1390482124311,264,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T03_CREATE,200,"Number of samples in transaction : 1, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-8,,true,76964,6,6,0,1,0,2590
+1390482124826,2772,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T06_OK,200,"Number of samples in transaction : 4, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-7,,true,19209,6,6,0,1,0,3
+1390482126771,1122,S04_STUDENTREGISTRATION_T08_LOGOUT,200,"Number of samples in transaction : 1, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-4,,true,5068,6,6,0,1,0,7
+1390482124796,879,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T01_HOME,200,"Number of samples in transaction : 3, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-10,,true,25715,5,5,0,1,0,2490
+1390482125244,776,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T02_ACCESSCODE-NEXT,200,"Number of samples in transaction : 2, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-9,,true,19874,5,5,0,1,0,2215
+1390482124341,2035,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T07_FINISH,200,"Number of samples in transaction : 4, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-6,,true,21401,5,5,0,1,0,2391
+1390482127168,172,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T04_LICENSEAGREE-NEXT,200,"Number of samples in transaction : 1, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-8,,true,15634,5,5,0,1,0,1970
+1390482129313,82,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T05_STUDENTINFO-NEXT,200,"Number of samples in transaction : 1, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-8,,true,538,5,5,0,1,0,3
+1390482128770,791,S04_STUDENTREGISTRATION_T08_LOGOUT,200,"Number of samples in transaction : 1, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-6,,true,5068,5,5,0,1,0,6
+1390482128167,482,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T02_ACCESSCODE-NEXT,200,"Number of samples in transaction : 2, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-10,,true,19874,4,4,0,1,0,1363
+1390482128237,485,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T03_CREATE,200,"Number of samples in transaction : 1, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-9,,true,76964,4,4,0,1,0,1694
+1390482129399,1492,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T06_OK,200,"Number of samples in transaction : 4, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-8,,true,19197,4,4,0,1,0,2
+1390482130014,242,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T03_CREATE,200,"Number of samples in transaction : 1, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-10,,true,76964,4,4,0,1,0,1456
+1390482127603,1908,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T07_FINISH,200,"Number of samples in transaction : 4, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-7,,true,21402,4,4,0,1,0,2270
+1390482130419,89,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T04_LICENSEAGREE-NEXT,200,"Number of samples in transaction : 1, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-9,,true,15634,4,4,0,1,0,1357
+1390482131867,81,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T05_STUDENTINFO-NEXT,200,"Number of samples in transaction : 1, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-9,,true,538,4,4,0,1,0,2
+1390482131783,1258,S04_STUDENTREGISTRATION_T08_LOGOUT,200,"Number of samples in transaction : 1, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-7,,true,5068,4,4,0,1,0,5
+1390482131951,1658,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T06_OK,200,"Number of samples in transaction : 4, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-9,,true,19202,3,3,0,1,0,1
+1390482131715,164,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T04_LICENSEAGREE-NEXT,200,"Number of samples in transaction : 1, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-10,,true,15634,3,3,0,1,0,2229
+1390482134110,82,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T05_STUDENTINFO-NEXT,200,"Number of samples in transaction : 1, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-10,,true,538,3,3,0,1,0,2
+1390482134195,1675,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T06_OK,200,"Number of samples in transaction : 4, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-10,,true,19196,3,3,0,1,0,0
+1390482133612,1879,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T07_FINISH,200,"Number of samples in transaction : 4, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-9,,true,21396,3,3,0,1,0,1730
+1390482137223,520,S04_STUDENTREGISTRATION_T08_LOGOUT,200,"Number of samples in transaction : 1, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-9,,true,5068,3,3,0,1,0,6
+1390482130895,2085,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T07_FINISH,200,"Number of samples in transaction : 4, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-8,,true,21408,2,2,0,1,0,8436
+1390482141418,1189,S04_STUDENTREGISTRATION_T08_LOGOUT,200,"Number of samples in transaction : 1, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-8,,true,5069,2,2,0,1,0,7
+1390482135872,1898,S04_STUDENTREGISTRATIONJOINSELFSTUDYCOURSE_T07_FINISH,200,"Number of samples in transaction : 4, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-10,,true,21395,1,1,0,1,0,8265
+1390482146038,1147,S04_STUDENTREGISTRATION_T08_LOGOUT,200,"Number of samples in transaction : 1, number of failing samples : 0",6.     STUDENT-REGISTRATION-FOR-SELF-STUDY 6-10,,true,5068,1,1,0,1,0,7
+1390482147207,2,STUJOIN : 100050,200,OK,7.     STUDENT-JOINS-SELF-STUDY 7-1,text,true,1469,1,1,0,1,0,0
+1390482150212,0,STUJOIN : 100051,200,OK,7.     STUDENT-JOINS-SELF-STUDY 7-2,text,true,1468,2,2,0,1,0,0
+1390482153218,0,STUJOIN : 100052,200,OK,7.     STUDENT-JOINS-SELF-STUDY 7-3,text,true,1469,3,3,0,1,0,0
+1390482147242,5610,S04_1_ST01_Login,200,"Number of samples in transaction : 4, number of failing samples : 0",7.     STUDENT-JOINS-SELF-STUDY 7-1,,true,24148,3,3,0,1,0,2918
+1390482156220,0,STUJOIN : 100053,200,OK,7.     STUDENT-JOINS-SELF-STUDY 7-4,text,true,1469,4,4,0,1,0,0
+1390482150213,5038,S04_1_ST01_Login,200,"Number of samples in transaction : 4, number of failing samples : 0",7.     STUDENT-JOINS-SELF-STUDY 7-2,,true,24160,4,4,0,1,0,1341
+1390482155773,60,S04_1_ST02_SelectCourse_Click_Join,200,"Number of samples in transaction : 1, number of failing samples : 0",7.     STUDENT-JOINS-SELF-STUDY 7-1,,true,2746,4,4,0,1,0,1692
+1390482156595,57,S04_1_ST02_SelectCourse_Click_Join,200,"Number of samples in transaction : 1, number of failing samples : 0",7.     STUDENT-JOINS-SELF-STUDY 7-2,,true,2749,4,4,0,1,0,1019
+1390482159221,0,STUJOIN : 100054,200,OK,7.     STUDENT-JOINS-SELF-STUDY 7-5,text,true,1469,5,5,0,1,0,0
+1390482153220,3438,S04_1_ST01_Login,200,"Number of samples in transaction : 4, number of failing samples : 0",7.     STUDENT-JOINS-SELF-STUDY 7-3,,true,24156,5,5,0,1,0,2598
+1390482157672,198,S04_1_ST03_Click_Study_On_YourOwn,200,"Number of samples in transaction : 1, number of failing samples : 0",7.     STUDENT-JOINS-SELF-STUDY 7-2,,true,3133,5,5,0,1,0,2406
+1390482156221,3256,S04_1_ST01_Login,200,"Number of samples in transaction : 4, number of failing samples : 0",7.     STUDENT-JOINS-SELF-STUDY 7-4,,true,24160,5,5,0,1,0,1921
+1390482162224,0,STUJOIN : 100055,200,OK,7.     STUDENT-JOINS-SELF-STUDY 7-6,text,true,1469,6,6,0,1,0,0
+1390482159259,56,S04_1_ST02_SelectCourse_Click_Join,200,"Number of samples in transaction : 1, number of failing samples : 0",7.     STUDENT-JOINS-SELF-STUDY 7-3,,true,2747,6,6,0,1,0,3440
+1390482161401,57,S04_1_ST02_SelectCourse_Click_Join,200,"Number of samples in transaction : 1, number of failing samples : 0",7.     STUDENT-JOINS-SELF-STUDY 7-4,,true,2749,6,6,0,1,0,2897
+1390482157526,496,S04_1_ST03_Click_Study_On_YourOwn,200,"Number of samples in transaction : 1, number of failing samples : 0",7.     STUDENT-JOINS-SELF-STUDY 7-1,,true,3133,6,6,0,1,0,6360
+1390482159222,3454,S04_1_ST01_Login,200,"Number of samples in transaction : 4, number of failing samples : 0",7.     STUDENT-JOINS-SELF-STUDY 7-5,,true,24160,6,6,0,1,0,2342
+1390482165223,1,STUJOIN : 100056,200,OK,7.     STUDENT-JOINS-SELF-STUDY 7-7,text,true,1469,7,7,0,1,0,0
+1390482162225,2941,S04_1_ST01_Login,200,"Number of samples in transaction : 4, number of failing samples : 0",7.     STUDENT-JOINS-SELF-STUDY 7-6,,true,24156,7,7,0,1,0,1218
+1390482168225,1,STUJOIN : 100057,200,OK,7.     STUDENT-JOINS-SELF-STUDY 7-8,text,true,1469,8,8,0,1,0,0
+1390482165225,2903,S04_1_ST01_Login,200,"Number of samples in transaction : 4, number of failing samples : 0",7.     STUDENT-JOINS-SELF-STUDY 7-7,,true,24151,8,8,0,1,0,1484
+1390482160277,1424,S04_1_ST04_Click_Join,200,"Number of samples in transaction : 9, number of failing samples : 0",7.     STUDENT-JOINS-SELF-STUDY 7-2,,true,38688,8,8,0,1,0,8059
+1390482165021,72,S04_1_ST02_SelectCourse_Click_Join,200,"Number of samples in transaction : 1, number of failing samples : 0",7.     STUDENT-JOINS-SELF-STUDY 7-5,,true,2749,8,8,0,1,0,5811
+1390482162756,336,S04_1_ST03_Click_Study_On_YourOwn,200,"Number of samples in transaction : 1, number of failing samples : 0",7.     STUDENT-JOINS-SELF-STUDY 7-3,,true,3133,8,8,0,1,0,7840
+1390482171226,0,STUJOIN : 100058,200,OK,7.     STUDENT-JOINS-SELF-STUDY 7-9,text,true,1469,9,9,0,1,0,0
+1390482169765,417,S04_1_ST05_Logout,200,"Number of samples in transaction : 2, number of failing samples : 0",7.     STUDENT-JOINS-SELF-STUDY 7-2,,true,9466,9,9,0,1,0,1560
+1390482164383,1131,S04_1_ST04_Click_Join,200,"Number of samples in transaction : 9, number of failing samples : 0",7.     STUDENT-JOINS-SELF-STUDY 7-1,,true,38613,8,8,0,1,0,6621
+1390482164357,277,S04_1_ST03_Click_Study_On_YourOwn,200,"Number of samples in transaction : 1, number of failing samples : 0",7.     STUDENT-JOINS-SELF-STUDY 7-4,,true,3134,8,8,0,1,0,7758
+1390482168227,3079,S04_1_ST01_Login,200,"Number of samples in transaction : 4, number of failing samples : 0",7.     STUDENT-JOINS-SELF-STUDY 7-8,,true,24153,8,8,0,1,0,1606
+1390482172140,401,S04_1_ST05_Logout,200,"Number of samples in transaction : 2, number of failing samples : 0",7.     STUDENT-JOINS-SELF-STUDY 7-1,,true,9466,8,8,0,1,0,1191
+1390482174227,0,STUJOIN : 100059,200,OK,7.     STUDENT-JOINS-SELF-STUDY 7-10,text,true,1469,8,8,0,1,0,0
+1390482166387,62,S04_1_ST02_SelectCourse_Click_Join,200,"Number of samples in transaction : 1, number of failing samples : 0",7.     STUDENT-JOINS-SELF-STUDY 7-6,,true,2747,8,8,0,1,0,8657
+1390482171227,3123,S04_1_ST01_Login,200,"Number of samples in transaction : 4, number of failing samples : 0",7.     STUDENT-JOINS-SELF-STUDY 7-9,,true,24151,8,8,0,1,0,1067
+1390482169615,69,S04_1_ST02_SelectCourse_Click_Join,200,"Number of samples in transaction : 1, number of failing samples : 0",7.     STUDENT-JOINS-SELF-STUDY 7-7,,true,2747,8,8,0,1,0,6519
+1390482175107,246,S04_1_ST03_Click_Study_On_YourOwn,200,"Number of samples in transaction : 1, number of failing samples : 0",7.     STUDENT-JOINS-SELF-STUDY 7-6,,true,3131,8,8,0,1,0,2827
+1390482170933,1047,S04_1_ST04_Click_Join,200,"Number of samples in transaction : 9, number of failing samples : 0",7.     STUDENT-JOINS-SELF-STUDY 7-3,,true,38622,8,8,0,1,0,7035
+1390482172393,976,S04_1_ST04_Click_Join,200,"Number of samples in transaction : 9, number of failing samples : 0",7.     STUDENT-JOINS-SELF-STUDY 7-4,,true,38677,8,8,0,1,0,5662
+1390482174229,2976,S04_1_ST01_Login,200,"Number of samples in transaction : 4, number of failing samples : 0",7.     STUDENT-JOINS-SELF-STUDY 7-10,,true,24150,8,8,0,1,0,2183
+1390482172915,68,S04_1_ST02_SelectCourse_Click_Join,200,"Number of samples in transaction : 1, number of failing samples : 0",7.     STUDENT-JOINS-SELF-STUDY 7-8,,true,2746,8,8,0,1,0,6834
+1390482170905,300,S04_1_ST03_Click_Study_On_YourOwn,200,"Number of samples in transaction : 1, number of failing samples : 0",7.     STUDENT-JOINS-SELF-STUDY 7-5,,true,3135,8,8,0,1,0,9123
+1390482179030,268,S04_1_ST05_Logout,200,"Number of samples in transaction : 2, number of failing samples : 0",7.     STUDENT-JOINS-SELF-STUDY 7-3,,true,9466,8,8,0,1,0,1379
+1390482179063,424,S04_1_ST05_Logout,200,"Number of samples in transaction : 2, number of failing samples : 0",7.     STUDENT-JOINS-SELF-STUDY 7-4,,true,9466,7,7,0,1,0,1425
+1390482179818,289,S04_1_ST03_Click_Study_On_YourOwn,200,"Number of samples in transaction : 1, number of failing samples : 0",7.     STUDENT-JOINS-SELF-STUDY 7-8,,true,3129,6,6,0,1,0,2055
+1390482175420,71,S04_1_ST02_SelectCourse_Click_Join,200,"Number of samples in transaction : 1, number of failing samples : 0",7.     STUDENT-JOINS-SELF-STUDY 7-9,,true,2746,6,6,0,1,0,7189
+1390482179391,51,S04_1_ST02_SelectCourse_Click_Join,200,"Number of samples in transaction : 1, number of failing samples : 0",7.     STUDENT-JOINS-SELF-STUDY 7-10,,true,2745,6,6,0,1,0,4760
+1390482180329,1115,S04_1_ST04_Click_Join,200,"Number of samples in transaction : 9, number of failing samples : 0",7.     STUDENT-JOINS-SELF-STUDY 7-5,,true,40675,6,6,0,1,0,3923
+1390482176204,408,S04_1_ST03_Click_Study_On_YourOwn,200,"Number of samples in transaction : 1, number of failing samples : 0",7.     STUDENT-JOINS-SELF-STUDY 7-7,,true,3131,6,6,0,1,0,9997
+1390482178181,897,S04_1_ST04_Click_Join,200,"Number of samples in transaction : 9, number of failing samples : 0",7.     STUDENT-JOINS-SELF-STUDY 7-6,,true,38674,6,6,0,1,0,9188
+1390482185373,432,S04_1_ST05_Logout,200,"Number of samples in transaction : 2, number of failing samples : 0",7.     STUDENT-JOINS-SELF-STUDY 7-5,,true,9466,6,6,0,1,0,2681
+1390482182681,302,S04_1_ST03_Click_Study_On_YourOwn,200,"Number of samples in transaction : 1, number of failing samples : 0",7.     STUDENT-JOINS-SELF-STUDY 7-9,,true,3130,5,5,0,1,0,6953
+1390482188272,401,S04_1_ST05_Logout,200,"Number of samples in transaction : 2, number of failing samples : 0",7.     STUDENT-JOINS-SELF-STUDY 7-6,,true,9466,5,5,0,1,0,2350
+1390482184203,644,S04_1_ST03_Click_Study_On_YourOwn,200,"Number of samples in transaction : 1, number of failing samples : 0",7.     STUDENT-JOINS-SELF-STUDY 7-10,,true,3130,4,4,0,1,0,7109
+1390482182163,857,S04_1_ST04_Click_Join,200,"Number of samples in transaction : 9, number of failing samples : 0",7.     STUDENT-JOINS-SELF-STUDY 7-8,,true,38610,4,4,0,1,0,9642
+1390482189937,1157,S04_1_ST04_Click_Join,200,"Number of samples in transaction : 9, number of failing samples : 0",7.     STUDENT-JOINS-SELF-STUDY 7-9,,true,38668,4,4,0,1,0,1954
+1390482186610,1023,S04_1_ST04_Click_Join,200,"Number of samples in transaction : 9, number of failing samples : 0",7.     STUDENT-JOINS-SELF-STUDY 7-7,,true,38612,4,4,0,1,0,6756
+1390482192671,389,S04_1_ST05_Logout,200,"Number of samples in transaction : 2, number of failing samples : 0",7.     STUDENT-JOINS-SELF-STUDY 7-8,,true,9466,4,4,0,1,0,1767
+1390482193054,425,S04_1_ST05_Logout,200,"Number of samples in transaction : 2, number of failing samples : 0",7.     STUDENT-JOINS-SELF-STUDY 7-9,,true,9466,3,3,0,1,0,1927
+1390482191957,897,S04_1_ST04_Click_Join,200,"Number of samples in transaction : 9, number of failing samples : 0",7.     STUDENT-JOINS-SELF-STUDY 7-10,,true,38609,2,2,0,1,0,3270
+1390482194395,328,S04_1_ST05_Logout,200,"Number of samples in transaction : 2, number of failing samples : 0",7.     STUDENT-JOINS-SELF-STUDY 7-7,,true,9466,2,2,0,1,0,1988
+1390482196129,404,S04_1_ST05_Logout,200,"Number of samples in transaction : 2, number of failing samples : 0",7.     STUDENT-JOINS-SELF-STUDY 7-10,,true,9466,1,1,0,1,0,2936
