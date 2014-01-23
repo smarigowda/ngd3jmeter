@@ -1,16 +1,18 @@
 How to use?
 
-1. Clone the repository (you need to fork)
+0. Fork the repository
+
+1. Clone the forked repository
 
 2. Start a web server at the root directory of the cloned repository (ngd3jmeter). I use Python command - python -m SimpleHTTPServer 9988
 
-3. Now open a web browser and type the URL http://localhost:9988/ngJMeter_tsplot.html you should see a time series plot.
+3. Now open a web browser and type the URL http://localhost:9988/ you should see the main web page having a navigation bar
 
-4. You can change the data in the data directory and update the html file ngJMeter_tsplot.html to plot time series using your data
+4. You can change the data in the data directory and update the template files under the template directory in order to use your data for various plots.
 
 5. Hovering the mouse on the transaction point will display the elapsed time and transaction name
 
-6. An option to filter the plot by elapsed or Latency 
+6. An option to filter the plot by elapsed or Latency. You can use JavaScript regex patters to filter.
 
 7. Bar plot added. Hovering mouse on the bars will diaply more metric
 
