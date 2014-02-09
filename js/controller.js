@@ -39,6 +39,7 @@ myApp.factory('input', function() {
 			// enter angular world, kick-off digest cycle
 			$scope.$apply();
 		});
+		// return promise immediately
 		return deferred.promise;
 	};
 

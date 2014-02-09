@@ -1,6 +1,6 @@
 // var myApp = angular.module('myApp', ['uiJMRouter'])
 myApp
-.directive('jmExploreJtl', ['metriclist', function(metriclist) {
+.directive('jmExploreJtl', ['metriclist', '$document', function(metriclist) {
 	var directiveDefinitionObject = {
 		restrict: 'A',
 		scope: {
@@ -33,8 +33,8 @@ myApp
 				// console.log(angular.element(tElement));
 				scope.getXMLData(scope.fileName, scope.folderName)
 					.then(function(data) {
-						// console.log('xml data...');
-						// console.log(data);
+						console.log('xml data...');
+						console.log(data);
 						var sample = d3.select(data).selectAll("sample");
 						// console.log(sample[0]);
 

@@ -44,6 +44,10 @@ angular.module('uiJMRouter')
 			.state("tsplot_imljan2014", {
 				url: "/tsplot_imljan2014",
 				templateUrl: '/template/jmtsplot_imljan2014_template.html'
+			})
+			.state("tsplot_nmlforlee", {
+				url: "/tsplot_nmlforlee",
+				templateUrl: '/template/jmtsplot_nml_forlee_template.html'
 			});
 
     }]);
