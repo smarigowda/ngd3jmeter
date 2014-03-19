@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<body>
+
+	<script src="./vendor/d3.v3.min.js"></script>
+
+	<script>
+
+		function walkTheDOM(node, func) {
+		    func(node);
+		    node = node.firstChild;
+		    while (node) {
+		        walkTheDOM(node, func);
+		        node = node.nextSibling;
+		    }
+		}
+
+		console.log('testing walk the dom');
+		var datafile = 'http://localhost:7777/data/nmltest_forlee/view_results_tree_class_600570.jtl.xml';
+		d3.xml(datafile, function(data) { 
+			xmldata = data; 
+			console.log(data);
+			console.dir(data);
+
+			// Example usage: Process all Text nodes on the page
+			// walkTheDOM(document.body, function (node) {
+			// walkTheDOM(xmldata, function (node) {
+			//     if (node.nodeType === 3) { // Is it a Text node?
+			//         var text = node.data.trim();
+			//         if (text.length > 0) { // Does it have non white-space text content?
+			//             // process text
+			//             console.log('A text node...')
+			//         }
+			//     }
+			// });
+
+			walkTheDOM(xmldata, function (node) {
+			    if (node.nodeType === 1) { // Is it an Element Node
+			    	if (node.nodeName === 'sample') {
+			    		if (+node.attributes[0].nodeValue > 12000) { // Response Time
+			            	console.log(node.attributes[5]); // Label
+			            	console.log(node.attributes[0].nodeValue); // Response Time Value
+			            }
+			        }
+			    }
+			});
+
+		});
+
+
+	</script>
+
+
+</body>

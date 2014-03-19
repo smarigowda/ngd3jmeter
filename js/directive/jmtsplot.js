@@ -5,7 +5,8 @@ myApp
 		restrict: 'A',
 		scope: {
 			fileName: '@',
-			folderName: '@'
+			folderName: '@',
+			title: '@'
 		},
 		transclude: true,
 		controller: 'myd3Controller',
@@ -152,7 +153,7 @@ myApp
 
 					// console.log('ydataLabel = '.concat(ydataLabel));
 
-					var margin = {top: 30, right: 100, bottom: 80, left: 100},
+					var margin = {top: 100, right: 100, bottom: 80, left: 100},
 						width = 1000 - margin.left - margin.right,
 						height = 400 - margin.top - margin.bottom;
 
@@ -226,11 +227,13 @@ myApp
 
 				d3.select('#'.concat(attrs.id)).append("p").append("h1").text(attrs.title);
 
+				console.log('attrs.title=' + attrs.title);
+
 				var div = d3.select('#'.concat(attrs.id)).append("div")
 								.attr("class", "tooltip")
 								.style("opacity", 0);
 
-				var margin = { top: 20, right: 100, bottom: 100, left: 100 },
+				var margin = { top: 100, right: 100, bottom: 100, left: 100 },
 					width = 1500 - margin.left - margin.right,
 					height = 500 - margin.top - margin.bottom;
 				
