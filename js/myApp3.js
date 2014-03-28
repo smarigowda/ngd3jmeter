@@ -21,6 +21,19 @@ var myApp3 = angular.module('myApp3', [])
 
 				data.map(function(d) { d.timeStamp2 = Math.round(+d.timeStamp/coeff) * coeff; });
 
+				// Filter data for specific transaction
+				// SC05_01_nMEL_HomePage
+				// var csvdata_filtered = _.filter(data, function(d) { return d.label === 'SC05_01_nMEL_HomePage'; });
+
+				// SC05_04_Click_Open_Ex1
+				// var csvdata_filtered = _.filter(data, function(d) { return d.label === 'SC05_04_Click_Open_Ex1'; });
+
+				// SC05_05_Submit_Ex1
+				var csvdata_filtered = _.filter(data, function(d) { return d.label === 'SC05_05_Submit_Ex1'; });
+
+				console.log('csvdata_filtered');
+				console.log(csvdata_filtered);
+
 				// for each unique timeStamp2, count samples
 				groupbyTimeStamp = d3.nest()
 									.key(function(d) { return d.timeStamp2; })
@@ -40,7 +53,7 @@ var myApp3 = angular.module('myApp3', [])
 									// count of samples for each uniq time stamp
 										return { throughput: d.length };
 									})
-									.entries(data);
+									.entries(csvdata_filtered);
 
 					console.log(groupbyTimeStamp);
 
